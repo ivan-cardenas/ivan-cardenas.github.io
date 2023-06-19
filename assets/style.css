@@ -1,0 +1,391 @@
+@font-face {
+  font-family: "Neue Frutiger";
+  src: url(./Philips/NeueFrutigerThaiModern-Md.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Neue Frutiger";
+  src: url(./Philips/NeueFrutigerThaiModern-Blk.ttf) format("truetype");
+  font-weight: bold;
+}
+
+body {
+  color: var(--blue1000);
+  font: 400 15px/22px "Neue Frutiger";
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#image {
+  padding: 100%;
+}
+
+#solar {
+  object-fit: fill;
+  display: block;
+  overflow: hidden;
+  padding: 40px;
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#zoom {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: fit-content;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background: #8cb4eb;
+  font-family: "Neue Frutiger", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: linear-gradient(to left, #27aef1, #0b71ad, #063f65);
+  box-shadow: 0 4px 10px 0 rgba(65, 132, 234, 0.75);
+}
+
+#popup {
+  position: absolute;
+  top: 100px;
+  right: 150px;
+  text-align: center;
+  width: 25%;
+  opacity: 0.8;
+  background-color: #8cb4eb;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #101010;
+}
+
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  min-height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: #0b5ed8;
+  color: #fff;
+}
+
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.listings .item:last-child {
+  border-bottom: none;
+}
+.listings .item .title {
+  display: block;
+  color: #0b5ed8;
+  font-weight: 700;
+}
+
+.listings .item .title small {
+  font-weight: 400;
+}
+.listings .item.active .title,
+.listings .item .title:hover {
+  color: #8cc63f;
+}
+.listings .item.active {
+  background-color: #f8f8f8;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #8cc63f;
+  border-radius: 0;
+}
+
+.marker {
+  border: #092f52;
+  cursor: pointer;
+  height: 50px;
+  width: 56px;
+
+  background-image: url(./img/DLS_PhilipsShield_48_v2.svg);
+}
+
+/* Marker tweaks */
+.mapboxgl-popup {
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
+
+.mapboxgl-popup-content div {
+  width: 500px;
+}
+
+.mapboxgl-popup-content {
+  background: var(--white);
+  font: 400 15px/22px "Neue Frutiger", "Helvetica Neue", sans-serif;
+  box-shadow: var(--elevation4);
+  width: fit-content;
+  padding: 0;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content h3 {
+  background: var(--white);
+  color: var(--blue1000);
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  margin-top: -15px;
+  width: auto;
+  box-shadow: var(--elevation8);
+}
+
+.mapboxgl-popup-content p {
+  margin: 0px;
+  padding: 5px 10px;
+  font-weight: 100;
+}
+
+.mapboxgl-popup-content h4 {
+  color: var(--blue1000);
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 3px 3px 0 0;
+  font-weight: 500;
+  margin-top: 0;
+  width: auto;
+}
+
+.mapboxgl-popup-content h3.Biome {
+  background: var(--white);
+  color: var(--blue1000);
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  margin-top: -15px;
+  width: auto;
+  box-shadow: var(--elevation8);
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+#a {
+  color: #fff;
+}
+
+/* //// */
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+.initative {
+  background: var(--white);
+  box-shadow: var(--elevation4);
+  width: max-content;
+}
+
+#menu {
+  background: var(--white);
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  right: 50px;
+  border-radius: 5px;
+  width: 150px;
+  border: var(--componentButtonPrimaryColor);
+  font-family: "Neue Frutiger";
+  font-weight: 400;
+}
+
+#menu a {
+  font-size: 13px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: var(--elevation4);
+  text-align: center;
+}
+
+#menu a:last-child {
+  border: none;
+}
+
+#menu a:hover {
+  background-color: #f8f8f8;
+  color: var(--gray900);
+  box-shadow: var(--elevation4);
+}
+
+#menu a.active {
+  background-color: var(--blue500);
+  color: var(--white);
+}
+
+#menu a.active:hover {
+  background: var(--blue700);
+}
+
+#menu__head {
+  background: var(--white);
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: var(--elevation4);
+  display: block;
+  padding: 3px;
+  margin: 0;
+  border: var(--componentButtonPrimaryColor);
+  text-align: center;
+  font-weight: light;
+}
+
+#menu a.inactive{
+  background: var(--white);
+}
+
+img {
+  width: 100%;
+}
+
+#img_pop{
+  width: 75%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+
+b {
+  padding: 5px 10px;
+}
+
+/* .collapsed {
+  display: none;
+} */
+
+div div#menu{
+  cursor:crosshair;
+}
+
+div#menu:hover {
+  transition: height 0.3s ease;
+  cursor: wait;
+}
+
+div#menu.collapsed {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.hidden{
+  display: none;
+}
+
+#legend{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: var(--elevation8);
+  display: flex;
+  align-items: stretch;
+  flex-direction: column-reverse;
+}
+
+.legend__item{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+#legend div{
+  
+  flex-direction: column;
+  align-items: stretch;
+}
+#legend div div{
+  display: flex;
+  align-items: center;
+  flex-direction: initial;
+}
+
+#layers_div{
+  cursor: pointer;
+}
+

@@ -1,0 +1,497 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.77218688000005, 31.327132996000046]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "Site_Name": "Suzhou",
+        "Country": "China",
+        "Manpower": null,
+        "Landuse":{ 
+          "Landscaped Areas": 13571.263,
+          "Building | Structure": 35892.422,
+          "Paved Area: Road Parking Lot": 25245.773
+        } 
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.07966575100005, 53.107736781000028]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "Site_Name": "Drachten",
+        "Country": "Netherlands",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 120614.718,
+          "Other upland": 240.051,
+          "Brush | Scrub-Shrub": 3004.534,
+          "Paved Area: Road Parking Lot": 70590.438,
+          "Landscaped Areas": 19022.04,
+          "Berm | Levee | Dike": 1119.068,
+          "Grassland | Herbaceous | Meadow": 29388.687,
+          "Drainage Ditch | Canal (Perennial)": 646.195
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [104.02422848000003, 1.0759853830000452]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "Site_Name": "Batam",
+        "Country": "Indonesia",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 52792.503,
+          "Paved Area: Road Parking Lot":9944.491
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.8807715000000371, 57.071903981000048]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "Site_Name": "Agito",
+        "Country": "Denmark",
+        "Manpower": null,
+        "Landuse":{
+          "Brush | Scrub-Shrub":117.588,
+          "Grassland | Herbaceous | Meadow": 1708.761,
+          "Building | Structure": 8297.215,
+          "Paved Area: Road Parking Lot": 5366.226
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3804530460000706, 51.490943711000057]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "Site_Name": "Best",
+        "Country": "Netherlands",
+        "Manpower": null,
+        "Landuse":{
+          "Forest":  236722.713,
+          "Building | Structure": 236671.822,
+          "Paved Area: Road Parking Lot": 59543.877,
+          "Landscaped Areas": 80923.547,
+          "Mixed Forest | Grassland": 58649.089,
+          "Bioswale | Ecoroof | Detention Pond": 2767.384,
+          "Pond": 562.193
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.9855871750000347, 48.678824400000053]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "Site_Name": "Boeblingen",
+        "Country": "Germany",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 13482.56,
+          "Landscaped Areas": 4745.903,
+          "Paved Area: Road Parking Lot": 16023.77
+
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.21540973499998, 47.799526738000054]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "Site_Name": "Bothell",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 39603.829,
+          "Landscaped Areas": 32811.374,
+          "Paved Area: Road Parking Lot":  121319.459,
+          "Forest": 134210.814,
+          "Pond":  1939.295
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.80357824999999, 38.981387866000034]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "Site_Name": "Colorado Springs",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Paved Area: Road Parking Lot":30201.351,
+          "Building | Structure": 9112.888,
+          "Landscaped Areas": 8078.59,
+          "Pasture | Range": 8486.064,
+          "Bare Ground (soil | rock)": 5087.283
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-84.278946889999986, 9.9869821890000594]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "Site_Name": "Coyol",
+        "Country": "Costa Rica",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 20957.968,
+          "Landscaped Areas": 3931.609,
+          "Paved Area: Road Parking Lot": 12518.256
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.959088149000024, 32.786775219000049]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "Site_Name": "Haifa",
+        "Country": "Israel",
+        "Manpower": null,
+        "Landuse":{
+          "Paved Area: Road Parking Lot": 6152.269,
+          "Building | Structure":  798.634
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.015400793000026, 53.622329977000049]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "Site_Name": "Hamburg",
+        "Country": "Germany",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 48538.932,
+          "Paved Area: Road Parking Lot": 47866.529,
+          "Landscaped Areas": 2631.785,
+          "Brush | Scrub-Shrub": 1492.694,
+          "Pond": 180.924
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.324676122000028, 46.60978199300007]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "Site_Name": "Klagenfurt",
+        "Country": "Austria",
+        "Manpower": null,
+        "Landuse":{
+          "Brush | Scrub-Shrub":  22839.086,
+          "Paved Area: Road Parking Lot":  6058.709,
+          "Building | Structure": 41117.741,
+          "Grassland | Herbaceous | Meadow": 4247.461,
+          "Bare Ground (soil | rock)": 2016.334,
+          "Cultivated | Cropland":  11378.16
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.798948111999948, 42.75523428200006]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "Site_Name": "Latham",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Paved Area: Road Parking Lot":47874.985,
+          "Pasture | Range": 49031.435,
+          "Building | Structure": 22822.921,
+          "Wet Areas": 5029.187,
+          "Forest": 38718.107
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.693222480999964, 40.486230070000033]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "Site_Name": "Murrysville",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse": {
+          "Bioswale | Ecoroof | Detention Pond":9173.823,
+          "Landscaped Areas": 12202.244,
+          "Grassland | Herbaceous | Meadow": 35821.965,
+          "Mixed Forest | Grassland": 4283.996,
+          "Building | Structure": 16013.256,
+          "Paved Area: Road Parking Lot": 60680.341
+      }
+    }
+  },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-86.78271674299998, 36.225080481000077]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "Site_Name": "Nashville",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure":9148.278,
+          "Paved Area: Road Parking Lot":6818.37,
+          "Landscaped Areas": 3327.357
+
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.653000775999942, 40.536077214000045]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "Site_Name": "New Kensington",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Landscaped Areas": 41626.777,
+          "Brush | Scrub-Shrub": 33222.759,
+          "Bioswale | Ecoroof | Detention Pond": 2136.769,
+          "Mixed Forest | Grassland": 18478.126,
+          "Forest": 11393.699,
+          "Paved Area: Road Parking Lot": 47574.004,
+          "Industrial District": 16631.829
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.61675059099997, 34.043183292000037]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "Site_Name": "Ontario",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure": 13140.157,
+          "Paved Area: Road Parking Lot":  9717.217
+
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-93.410733929999935, 45.05997304300007]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "Site_Name": "Plymouth",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Gravel Area: Trail Road Staging Area Compacted Gravel": 58293.19,
+          "Building | Structure": 19997.554,
+          "Grassland | Herbaceous | Meadow": 68899.859
+
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [73.774997689000031, 18.784106625000049]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "Site_Name": "Pune",
+        "Country": "India",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure":18712.587,
+          "Landscaped Areas": 10781.634,
+          "Paved Area: Road Parking Lot": 12396.382
+
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.594341438999948, 40.699766421000049]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "Site_Name": "Reedsville",
+        "Country": "United States of America",
+        "Manpower": null,
+        "Landuse":{
+          "Brush | Scrub-Shrub":  15786.658,
+          "Building | Structure": 14008.426,
+          "Gravel Area: Trail Road Staging Area Compacted Gravel": 21265.044,
+          "Forest": 17904.45,
+          "Grassland | Herbaceous | Meadow": 53134.754,
+          "Landscaped Areas":  13621.099,
+          "Paved Area: Road Parking Lot": 35895.051
+        }
+
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.6313300490001, 31.225677501000064]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "Site_Name": "Shanghai",
+        "Country": "China",
+        "Manpower": null,
+        "Landuse": {
+          "Building | Structure": 3352.544
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.93764003500007, 22.557826119000026]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "Site_Name": "Shenzhen",
+        "Country": "China",
+        "Manpower": null,
+        "Landuse":{
+          "Building | Structure":1486.726
+          
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.31309589400007, 22.054605192000054]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "Site_Name": "Zhuhai",
+        "Country": "China",
+        "Manpower": null,
+        "Landuse":{
+          "Landscaped Areas": "10872.404",
+          "Building | Structure": 23418.424,
+          "Paved Area: Road Parking Lot": 16967.994
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-45.416697279999937, -21.628005136999946]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "Site_Name": "Varginha",
+        "Country": "Brazil",
+        "Manpower": null,
+        "Landuse":{
+          "Gravel Area: Trail Road Staging Area Compacted Gravel":34867.34,
+          "Bare Ground (soil | rock)": 313.815,
+          "Other upland":  12422.438,
+          "Paved Area: Road Parking Lot":4665.503,
+          "Grassland | Herbaceous | Meadow": 31061.514
+
+
+        }
+      }
+    }
+  ]
+}
