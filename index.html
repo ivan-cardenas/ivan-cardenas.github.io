@@ -3,491 +3,667 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="description" content="Iván Cárdenas-León - Geospatial Specialist & PhD Candidate">
     <meta name="author" content="Ivan Cardenas">
-    <title>Ivan Cardenas | Landing page</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Steller main styles -->
-	<link rel="stylesheet" href="assets/css/steller.css">
+    <title>Iván Cárdenas-León | Geospatial Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #104b72;
+            --accent-color: #e74c3c;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 80px 0 40px;
+        }
+        .header .infos h6.title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .header .infos .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .header .infos p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        .btn-primary {
+            background: var(--secondary-color);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn-dark {
+            background: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+        .widget {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .widget-item {
+            text-align: center;
+        }
+        .widget-item h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .custom-card {
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .custom-card .icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        .skill-item {
+            margin-bottom: 30px;
+        }
+        .skill-item h6 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .progress {
+            height: 30px;
+            border-radius: 15px;
+            background: #e9ecef;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        .achievement-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 5px;
+        }
+        .contact-infos .item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-infos .item i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-right: 20px;
+        }
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+        }
+        .social-item {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        .social-item:hover {
+            background: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        .experience-card {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .experience-card h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .experience-card .period {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .profile-placeholder {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: 8px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .portfolio-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.3s;
+            height: 300px;
+            background: #f8f9fa;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-overlay h5 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .portfolio-overlay p {
+            margin-bottom: 20px;
+        }
+        .portfolio-overlay .btn {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 25px;
+        }
+        .portfolio-overlay .btn:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <!-- Page navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#" style="font-weight: bold; color: var(--primary-color);">IC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#service">Service</a>
-                    </li>                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Testmonial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="- btn btn-primary rounded ml-4" href="components.html">Copmonents</a>
-                    </li>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>          
     </nav>
-    <!-- End of page navibation -->
 
-    <!-- Page Header -->
     <header class="header" id="home">
         <div class="container">
-            <div class="infos">
-                <h6 class="subtitle">hello,I'm</h6>
-                <h6 class="title">Iván Cárdenas</h6>
-                <p>GIS Analyst | Geospatial Science | Cartography</p>
-                <p> Urban Planning | Environmental Engineer |</p>
+            <div class="row align-items-center">
+                <div class="col-md-7 infos">
+                    <h6 class="subtitle">Hello, I'm</h6>
+                    <h6 class="title">Iván Cárdenas-León</h6>
+                    <p>Geospatial Specialist | PhD Candidate</p>
+                    <p>Urban Planning | Digital Twins | Environmental Impact Assessment</p>
 
-                <div class="buttons pt-3">
-                    <button class="btn btn-primary rounded">HIRE ME</button>
-                    <button class="btn btn-dark rounded">DOWNLOAD CV</button>
-                </div>      
+                    <div class="buttons pt-4">
+                        <a href="mailto:ilcardenas26@gmail.com" class="btn btn-primary rounded mr-2">HIRE ME</a>
+                        <a href="#contact" class="btn btn-dark rounded">CONTACT ME</a>
+                    </div>      
 
-                <div class="socials mt-4">
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                    <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    <div class="socials mt-4">
+                        <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a class="social-item" href="tel:+31686185983"><i class="ti-mobile"></i></a> -->
+                        <a class="social-item" href="mailto:ilcardenas26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
                 </div>
-            </div>              
-            <div class="img-holder">
-                <img src="assets/imgs/man.svg" alt="">
-            </div>      
-        </div>  
 
-        <!-- Header-widget -->
-        <div class="widget">
-            <div class="widget-item">
-                <h2>124</h2>
-                <p>Happy Clients</p>
+            <div class="col-md-5 text-center">
+                    <!-- REPLACE THIS: Add your profile picture here -->
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQF4V7O2g0xZtQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718366810635?e=1769040000&v=beta&t=vpX9D6Iz2UGaqS4QrpmVnBBjJP0JdQgUE1YLmuy432c" alt="Iván Cárdenas-León" class="profile-image">
+                    <!-- <div class="profile-placeholder"> -->
+                        <i class="ti-user"></i>
+                    </div>
             </div>
-            <div class="widget-item">
-                <h2>456</h2>
-                <p>Project Completed</p>
-            </div>
-            <div class="widget-item">
-                <h2>789</h2>
-                <p>Awards Won</p>
+
+            <div class="widget">
+                <div class="widget-item">
+                    <h2>6+</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="widget-item">
+                    <h2>+10</h2>
+                    <p>Clients</p>
+                </div>
+                <div class="widget-item">
+                    <h2>3</h2>
+                    <p>+500 Maps</p>
+                </div>
             </div>
         </div>
     </header>
-    <!-- End of Page Header -->
     
-    <!-- About section -->
-    <section id="about" class="section mt-3">
-        <div class="container mt-5">
-            <div class="row text-center text-md-left">
-                <div class="col-md-3">
-                    <img src="assets/imgs/avatar.jpg" alt="" class="img-thumbnail mb-4">
-                </div>
-                <div class="pl-md-4 col-md-9">
-                    <h6 class="title">James Smith</h6>
-                    <p class="subtitle">UI/UX Designer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, pariatur, aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi praesentium mollitia, illum repudiandae quidem quod, magni magnam.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eius, nam. Quo praesentium qui temporibus voluptatum, facilis aliquid eligendi fugiat beatae neque inventore non. Laborum repellendus consequatur ullam voluptatum asperiores.</p>
-                    <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>                   
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service section -->
-    <section id="service" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Service</h6>
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row">
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-crown"></i>
-                            <h5>UI/UX Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-desktop"></i>
-                            <h5>Web Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-mobile"></i>
-                            <h5>App Design</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-bar-chart"></i>
-                            <h5>SEO</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Sectoin -->
-
-    <!-- Skills section -->
-    <section class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Why Choose me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row text-left">
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Photoshop</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Web Design</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">App Design</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">SEO</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
-                    </div>
-                </div>
-            </div>  
-        </div>
-    </section>
-    <!-- End of Skills sections -->
-
-    <!-- Portfolio section -->
-    <section id="portfolio" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Check My Wonderful Works</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>                  
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-3.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-4.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>                  
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-5.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-6.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>                  
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- End of portfolio section -->
-
-    <!-- Testmonial Section -->
-    <section id="testmonial" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Testmonial</h6>
-            <h6 class="section-title mb-4">What People Say About Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-1.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
-                                <h1 class="title">Emma Re</h1>
-                                <h1 class="subtitle">Graphic Designer</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-2.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
-                                <h1 class="title">James Bert</h1>
-                                <h1 class="subtitle">Web Designer</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-3.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates in enim vel amet?</p>
-                                <h1 class="title">Michael Abra</h1>
-                                <h1 class="subtitle">Web Developer</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of testmonial section -->
-
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">My Blogs</h6>
-            <h6 class="section-title mb-4">Latest News</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="row text-left">
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Designe for Everyone</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Layouts</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Bootstrap Framework</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Admin</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.</p>
-                            <a href="javascript:void(0)">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hire me section -->
-    <section class="bg-gray p-0 section">
+    <section id="about" class="section">
         <div class="container">
-            <div class="card bg-primary">
-                <div class="card-body text-light">
-                    <div class="row align-items-center">
-                        <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">Accusantium labore nostrum similique quisquam.</p>
+            <div class="text-center mb-5">
+                <h6 class="subtitle">About Me</h6>
+                <h6 class="section-title">Geospatial Specialist & Researcher</h6>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. I am passionate about mapping usage for territorial solutions. I have over 6 years of experience in areas such as Territorial Development, Ordering Plans Cartography, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, Research and Environmental Impact Assessment.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Education</h5>
+                            <div class="experience-card">
+                                <h5>PhD Candidate</h5>
+                                <p class="period">October 2023 - Present</p>
+                                <p>University of Twente - Urban Planning and Management Department<br>Research: Digital Twins as Enhanced 3D Planning Support Systems</p>
+                            </div>
+                            <div class="experience-card">
+                                <h5>MSc Geo-Information Science</h5>
+                                <p class="period">September 2021 - July 2023</p>
+                                <p>University of Twente - ITC, Enschede, Netherlands<br><span class="achievement-badge">Cum Laude</span> 
+                            </div>
+                            <div class="experience-card">
+                                <h5>PG-D GIS Specialist</h5>
+                                <p class="period">April 2017 - November 2017</p>
+                                <p>Universidad Distrital Francisco José de Caldas, Bogotá, Colombia</p> 
+                                <span class="achievement-badge">9.3 Final Mark</span></p>
+                            </div>
+                            <div class="experience-card">
+                                <h5>BEng Environmental and Sanitary</h5>
+                                <p class="period">2009 - 2015</p>
+                                <p>Universidad de La Salle, Bogotá, Colombia</p>
+                                <span class="achievement-badge">Top 7%</span></p>
+                            </div>
                         </div>
-                        <div class="col-sm-3 text-center text-sm-right">
-                            <button class="btn btn-light rounded">Hire Me!</button>
+                        <div class="col-md-6">
+                            <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Languages</h5>
+                            <div class="skill-item">
+                                <h6>Spanish (Native)</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 100%;">Native</div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <h6>English (C2)</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 95%;">C2</div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <h6>Portuguese (A2)</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 40%;">A2</div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <h6>Dutch (A1)</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 20%;">A1</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
-    </section>      
-    <!-- End od Hire me section. -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
-
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p> 12345 Fake ST NoWhere AB Country</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>(123) 456-7890</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>info@website.com</p>
-                        </div>
-                    </div>
-                </div>                  
-            </div>
-        </div>  
-        <div id="map">
-            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>      
     </section>
-    <!-- End of Contact Section -->
 
-    <!-- Page Footer -->
+    <section id="experience" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">Experience</h6>
+                <h6 class="section-title">Professional Journey</h6>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="experience-card">
+                        <h5>Doctoral Researcher</h5>
+                        <p class="period">October 2023 - Present | University of Twente</p>
+                        <p>Doctorate candidate on the Urban Planning and Management Department. Research
+project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
+                        <p><strong>Skills:</strong> Digital Twins, Urban Planning, Research</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="experience-card">
+                        <h5>Natural Capital Intern</h5>
+                        <p class="period">April 2023 - August 2023 | Philips</p>
+                        <p>Developed an interactive map featuring global manufacturing sites, land use, and biodiversity improvement projects. Integrated data from external sources and remote sensing using Mapbox, HTML, CSS, and JavaScript.</p>
+                        <p><strong>Skills:</strong> Data Integration, Web Mapping, Data Visualization</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="experience-card">
+                        <h5>Student Assistant</h5>
+                        <p class="period">January 2023 - August 2023 | University of Twente</p>
+                        <p>Leading role in designing a tool for measuring Urban Heat Island and Perceived Body Temperature within a 3D environment. Part of a collaborative project between University of Twente and Vrij Universiteit Amsterdam.</p>
+                        <p><strong>Skills:</strong> Research, Urban Planning, Data Visualization, Digital Twins</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="experience-card">
+                        <h5>Freelancer - Geographic Information Systems Analyst </h5>
+                        <p class="period">March 2016 - August 2021</p>
+                        <p>Geospatial Consultant providing services in spatial information management and analysis. Worked with multiple clients including Terrasos, Ingema Limitada, Geocol Consultores S.A, Valoración Económica Ambiental S.A.S., P&P Gestión Integral, and Duitama City Hall.</p>
+                        <p><strong>Key Competencies:</strong> Cartographic Styling, Data Quality, Environmental Analysis, Geospatial Data Management, Hydrological Modeling, Remote Sensing, Risk Assessment, Spatial Analysis, Stakeholder Engagement, Territorial Planning, UAV Mapping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">Skills</h6>
+                <h6 class="section-title">Technical Expertise</h6>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-layer-group"></i>
+                            <h5>Mapping Software</h5>
+                            <p class="mt-3">ArcGIS Pro, ArcMap, ESRI Suite, QGIS, Mapbox</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-code"></i>
+                            <h5>Programming</h5>
+                            <p class="mt-3">Python, HTML5, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-marker"></i>
+                            <h5>Graphic Design</h5>
+                            <p class="mt-3">Adobe Illustrator, InDesign, Blender</p>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-satellite"></i>
+                            <h5>Remote Sensing</h5>
+                            <p class="mt-3">Imagery Analysis, UAV Mapping, Data Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-chart-line"></i>
+                            <h5>Spatial Analysis</h5>
+                            <p class="mt-3">Geospatial Modeling, Risk Assessment, Territorial Planning</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="custom-card card border">
+                        <div class="card-body text-center">
+                            <i class="icon fa-solid fa-arrow-up-from-water-pump"></i>
+                            <h5>Hydrological Modeling</h5>
+                            <p class="mt-3">HEC-HMS, HEC-RAS</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">Portfolio</h6>
+                <h6 class="section-title">Featured Projects</h6>
+                <p>Explore my interactive dashboards and data visualization projects</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial">
+                        <div class="portfolio-overlay">
+                            <h5>Dashboard Tutorial</h5>
+                            <p>Small Lecture on creating spatial interactive dashboards with Streamlit</p>
+                            <a href="https://ivan-cardenas.github.io/Dashboard-Tutorial/" target="_blank" class="btn rounded">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data">
+                        <div class="portfolio-overlay">
+                            <h5>Research Papers Data</h5>
+                            <p>Comprehensive data visualization and analysis of research publications and academic contributions</p>
+                            <a href="https://ivan-cardenas.github.io/PapersData/" target="_blank" class="btn rounded">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">Achievements</h6>
+                <h6 class="section-title">Recognition & Awards</h6>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card border h-100">
+                        <div class="card-body">
+                            <span class="achievement-badge">1st Place</span>
+                            <h5 class="mt-3">Map Gallery Best Cartography</h5>
+                            <p class="text-muted">2020 | ESRI Colombia</p>
+                            <p>Recognized for excellence in cartographic design and visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card border h-100">
+                        <div class="card-body">
+                            <span class="achievement-badge">Scholarship</span>
+                            <h5 class="mt-3">Excellence Scholarship</h5>
+                            <p class="text-muted">2020 | University of Twente</p>
+                            <p>Awarded for academic excellence to pursue MSc degree.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card border h-100">
+                        <div class="card-body">
+                            <span class="achievement-badge">1st Place</span>
+                            <h5 class="mt-3">Digital Twin Hackathon</h5>
+                            <p class="text-muted">2021 | University of the Witwatersrand, Johannesburg</p>
+                            <p>Winner for innovative digital twin solution development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card border h-100">
+                        <div class="card-body">
+                            <span class="achievement-badge">2nd Place</span>
+                            <h5 class="mt-3">Best Master Thesis</h5>
+                            <p class="text-muted">2023 | Geo-Informatie Nederland (GIN)</p>
+                            <p>Recognized for outstanding research in Geo-information sciences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">Contact</h6>
+                <h6 class="section-title">Get In Touch</h6>
+                <p>I'm always open to discussing new projects, opportunities, or collaborations.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="contact-infos">
+                        <div class="item">
+                            <i class="fa-solid  fa-location-arrow"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Amsterdam, North Holland, Netherlands</p>
+                            </div>                          
+                        </div>
+                        <!-- <div class="item">
+                            <i class="ti-mobile"></i>
+                            <div>
+                                <h5>Phone Number</h5>
+                                <p>+31 686185983</p>
+                            </div>                          
+                        </div> -->
+                        <div class="item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h5>Email Address</h5>
+                                <p>ilcardenas26@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h5>LinkedIn</h5>
+                                <p><a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank">linkedin.com/in/ivancardenasleon</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="page-footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Iván Cárdenas-León. All rights reserved.</p>
                 </div>
                 <div class="col-sm-6">
-                    <div class="socials">
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    <div class="socials text-right">
+                        <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class="social-item" href="mailto:ilcardenas26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <!-- <a class="social-item" href="tel:+31686185983"><i class="ti-mobile"></i></a> -->
                     </div>
                 </div>
             </div>
         </div>
-    </footer> 
-    <!-- End of page footer -->
-	
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    </footer>
 
-    <!-- steller js -->
-    <script src="assets/js/steller.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
