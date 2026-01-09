@@ -262,6 +262,154 @@
             background: var(--secondary-color);
             color: white;
         }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+        }
+
+        .animate-on-scroll.animated {
+            animation-duration: 0.8s;
+            animation-fill-mode: both;
+        }
+
+        .fade-in-up {
+            animation-name: fadeInUp;
+        }
+
+        .fade-in {
+            animation-name: fadeIn;
+        }
+
+        .slide-in-left {
+            animation-name: slideInLeft;
+        }
+
+        .slide-in-right {
+            animation-name: slideInRight;
+        }
+
+        .scale-in {
+            animation-name: scaleIn;
+        }
+
+        /* Stagger animation delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+
+        /* Profile image floating animation */
+        .profile-image {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Typing cursor */
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: white;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Progress bar animation */
+        .progress-bar {
+            width: 0 !important;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .progress-bar.animated {
+            width: var(--target-width) !important;
+        }
+
+        /* Achievement badge pulse */
+        .achievement-badge {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -290,17 +438,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-7 infos">
-                    <h6 class="subtitle">Hello, I'm</h6>
-                    <h6 class="title">Iván Cárdenas-León</h6>
-                    <p>Geospatial Specialist | PhD Candidate</p>
-                    <p>Urban Planning | Digital Twins | Environmental Impact Assessment</p>
+                    <h6 class="subtitle animate-on-scroll fade-in-up">Hello, I'm</h6>
+                    <h6 class="title" id="typing-text"></h6>
+                    <p class="animate-on-scroll fade-in-up stagger-2">Geospatial Specialist | PhD Candidate</p>
+                    <p class="animate-on-scroll fade-in-up stagger-3">Urban Planning | Digital Twins | Environmental Impact Assessment</p>
 
-                    <div class="buttons pt-4">
+                    <div class="buttons pt-4 animate-on-scroll fade-in-up stagger-4">
                         <a href="mailto:ilcardenas26@gmail.com" class="btn btn-primary rounded mr-2">HIRE ME</a>
                         <a href="#contact" class="btn btn-dark rounded">CONTACT ME</a>
                     </div>      
 
-                    <div class="socials mt-4">
+                    <div class="socials mt-4 animate-on-scroll fade-in-up stagger-5">
                         <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <!-- <a class="social-item" href="tel:+31686185983"><i class="ti-mobile"></i></a> -->
                         <a class="social-item" href="mailto:ilcardenas26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -315,18 +463,18 @@
                     </div>
             </div>
 
-            <div class="widget">
+            <div class="widget animate-on-scroll scale-in">
                 <div class="widget-item">
-                    <h2>6+</h2>
+                    <h2 class="counter" data-target="6">0</h2>
                     <p>Years Experience</p>
                 </div>
                 <div class="widget-item">
-                    <h2>+10</h2>
+                    <h2 class="counter" data-target="10">0</h2>
                     <p>Clients</p>
                 </div>
                 <div class="widget-item">
-                    <h2>3</h2>
-                    <p>+500 Maps</p>
+                    <h2 class="counter" data-target="500">0</h2>
+                    <p>Maps</p>
                 </div>
             </div>
         </div>
@@ -335,12 +483,12 @@
     <section id="about" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">About Me</h6>
-                <h6 class="section-title">Geospatial Specialist & Researcher</h6>
+                <h6 class="subtitle animate-on-scroll fade-in-up">About Me</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Geospatial Specialist & Researcher</h6>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="lead">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. I am passionate about mapping usage for territorial solutions. I have over 6 years of experience in areas such as Territorial Development, Ordering Plans Cartography, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, Research and Environmental Impact Assessment.</p>
+                    <p class="lead animate-on-scroll fade-in-up stagger-2">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. I am passionate about mapping usage for territorial solutions. I have over 6 years of experience in areas such as Territorial Development, Ordering Plans Cartography, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, Research and Environmental Impact Assessment.</p>
                     
                     <div class="row mt-5">
                         <div class="col-md-6">
@@ -373,25 +521,25 @@
                             <div class="skill-item">
                                 <h6>Spanish (Native)</h6>
                                 <div class="progress">
-                                    <div class="progress-bar" style="width: 100%;">Native</div>
+                                    <div class="progress-bar" data-width="100">Native</div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <h6>English (C2)</h6>
                                 <div class="progress">
-                                    <div class="progress-bar" style="width: 95%;">C2</div>
+                                    <div class="progress-bar" data-width="95">C2</div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <h6>Portuguese (A2)</h6>
                                 <div class="progress">
-                                    <div class="progress-bar" style="width: 40%;">A2</div>
+                                    <div class="progress-bar" data-width="40">A2</div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <h6>Dutch (A1)</h6>
                                 <div class="progress">
-                                    <div class="progress-bar" style="width: 20%;">A1</div>
+                                    <div class="progress-bar" data-width="20">A1</div>
                                 </div>
                             </div>
                         </div>
@@ -404,8 +552,8 @@
     <section id="experience" class="section" style="background: #f8f9fa;">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">Experience</h6>
-                <h6 class="section-title">Professional Journey</h6>
+                <h6 class="subtitle animate-on-scroll fade-in-up">Experience</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Professional Journey</h6>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -448,13 +596,13 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
     <section id="skills" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">Skills</h6>
-                <h6 class="section-title">Technical Expertise</h6>
+                <h6 class="subtitle animate-on-scroll fade-in-up">Skills</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Technical Expertise</h6>
             </div>
 
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card border animate-on-scroll scale-in stagger-1">
                         <div class="card-body text-center">
                             <i class="icon fa-solid fa-layer-group"></i>
                             <h5>Mapping Software</h5>
@@ -462,9 +610,9 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="col-md-4 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card border animate-on-scroll scale-in stagger-2">
                         <div class="card-body text-center">
                             <i class="icon fa-solid fa-code"></i>
                             <h5>Programming</h5>
@@ -473,7 +621,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                  <div class="col-md-4 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card border animate-on-scroll scale-in stagger-3">
                         <div class="card-body text-center">
                             <i class="icon fa-solid fa-marker"></i>
                             <h5>Graphic Design</h5>
@@ -481,9 +629,9 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                         </div>
                     </div>
                 </div>
-              
+
                 <div class="col-md mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card border animate-on-scroll scale-in stagger-4">
                         <div class="card-body text-center">
                             <i class="icon fa-solid fa-satellite"></i>
                             <h5>Remote Sensing</h5>
@@ -492,7 +640,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                 <div class="col-md mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card border animate-on-scroll scale-in stagger-5">
                         <div class="card-body text-center">
                             <i class="icon fa-solid fa-chart-line"></i>
                             <h5>Spatial Analysis</h5>
@@ -516,13 +664,13 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
     <section id="portfolio" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">Portfolio</h6>
-                <h6 class="section-title">Featured Projects</h6>
-                <p>Explore my interactive dashboards and data visualization projects</p>
+                <h6 class="subtitle animate-on-scroll fade-in-up">Portfolio</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Featured Projects</h6>
+                <p class="animate-on-scroll fade-in-up stagger-2">Explore my interactive dashboards and data visualization projects</p>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="portfolio-card">
+                    <div class="portfolio-card animate-on-scroll scale-in stagger-1">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial">
                         <div class="portfolio-overlay">
                             <h5>Dashboard Tutorial</h5>
@@ -534,7 +682,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="portfolio-card">
+                    <div class="portfolio-card animate-on-scroll scale-in stagger-2">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data">
                         <div class="portfolio-overlay">
                             <h5>Research Papers Data</h5>
@@ -552,12 +700,12 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
     <section id="achievements" class="section" style="background: #f8f9fa;">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">Achievements</h6>
-                <h6 class="section-title">Recognition & Awards</h6>
+                <h6 class="subtitle animate-on-scroll fade-in-up">Achievements</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Recognition & Awards</h6>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="card border h-100">
+                    <div class="card border h-100 animate-on-scroll scale-in stagger-1">
                         <div class="card-body">
                             <span class="achievement-badge">1st Place</span>
                             <h5 class="mt-3">Map Gallery Best Cartography</h5>
@@ -567,7 +715,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="card border h-100">
+                    <div class="card border h-100 animate-on-scroll scale-in stagger-2">
                         <div class="card-body">
                             <span class="achievement-badge">Scholarship</span>
                             <h5 class="mt-3">Excellence Scholarship</h5>
@@ -577,7 +725,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="card border h-100">
+                    <div class="card border h-100 animate-on-scroll scale-in stagger-3">
                         <div class="card-body">
                             <span class="achievement-badge">1st Place</span>
                             <h5 class="mt-3">Digital Twin Hackathon</h5>
@@ -587,7 +735,7 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="card border h-100">
+                    <div class="card border h-100 animate-on-scroll scale-in stagger-4">
                         <div class="card-body">
                             <span class="achievement-badge">2nd Place</span>
                             <h5 class="mt-3">Best Master Thesis</h5>
@@ -603,9 +751,9 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
     <section id="contact" class="section">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="subtitle">Contact</h6>
-                <h6 class="section-title">Get In Touch</h6>
-                <p>I'm always open to discussing new projects, opportunities, or collaborations.</p>
+                <h6 class="subtitle animate-on-scroll fade-in-up">Contact</h6>
+                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Get In Touch</h6>
+                <p class="animate-on-scroll fade-in-up stagger-2">I'm always open to discussing new projects, opportunities, or collaborations.</p>
             </div>
 
             <div class="row">
@@ -664,6 +812,136 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+
+                    // Trigger counter animation for widget counters
+                    if (entry.target.classList.contains('widget')) {
+                        animateCounters();
+                    }
+
+                    // Trigger progress bar animation
+                    if (entry.target.querySelector('.progress-bar')) {
+                        animateProgressBars();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Counter animation for stats widget
+        let countersAnimated = false;
+        function animateCounters() {
+            if (countersAnimated) return;
+            countersAnimated = true;
+
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                        // Add suffix for specific counters
+                        if (target === 6) counter.textContent = '6+';
+                        if (target === 10) counter.textContent = '+10';
+                        if (target === 500) counter.textContent = '+500';
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // Progress bar animation
+        let progressBarsAnimated = false;
+        function animateProgressBars() {
+            if (progressBarsAnimated) return;
+            progressBarsAnimated = true;
+
+            const progressBars = document.querySelectorAll('.progress-bar[data-width]');
+            progressBars.forEach(bar => {
+                const targetWidth = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = targetWidth + '%';
+                }, 100);
+            });
+        }
+
+        // Typing animation for main title
+        const typingText = document.getElementById('typing-text');
+        const textToType = 'Iván Cárdenas-León';
+        let charIndex = 0;
+
+        function typeText() {
+            if (charIndex < textToType.length) {
+                typingText.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 100); // Typing speed
+            } else {
+                // Add blinking cursor after typing is complete
+                const cursor = document.createElement('span');
+                cursor.className = 'typing-cursor';
+                cursor.innerHTML = '&nbsp;';
+                typingText.appendChild(cursor);
+            }
+        }
+
+        // Start typing animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeText, 500); // Start after 500ms delay
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 
 </body>
 </html>
