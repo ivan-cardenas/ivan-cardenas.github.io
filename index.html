@@ -393,12 +393,8 @@
 
         /* Progress bar animation */
         .progress-bar {
-            width: 0 !important;
+            width: 0;
             transition: width 1.5s ease-in-out;
-        }
-
-        .progress-bar.animated {
-            width: var(--target-width) !important;
         }
 
         /* Achievement badge pulse */
@@ -491,7 +487,7 @@
                     <p class="lead animate-on-scroll fade-in-up stagger-2">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. I am passionate about mapping usage for territorial solutions. I have over 6 years of experience in areas such as Territorial Development, Ordering Plans Cartography, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, Research and Environmental Impact Assessment.</p>
                     
                     <div class="row mt-5">
-                        <div class="col-md-6">
+                        <div class="col-md-6 animate-on-scroll fade-in">
                             <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Education</h5>
                             <div class="experience-card">
                                 <h5>PhD Candidate</h5>
@@ -516,7 +512,7 @@
                                 <span class="achievement-badge">Top 7%</span></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 animate-on-scroll fade-in">
                             <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Languages</h5>
                             <div class="skill-item">
                                 <h6>Spanish (Native)</h6>
@@ -831,8 +827,9 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
                     }
 
                     // Trigger progress bar animation
-                    if (entry.target.querySelector('.progress-bar')) {
-                        animateProgressBars();
+                    const progressBars = entry.target.querySelectorAll('.progress-bar[data-width]');
+                    if (progressBars.length > 0) {
+                        animateProgressBars(progressBars);
                     }
                 }
             });
@@ -875,13 +872,13 @@ project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
         }
 
         // Progress bar animation
-        let progressBarsAnimated = false;
-        function animateProgressBars() {
-            if (progressBarsAnimated) return;
-            progressBarsAnimated = true;
-
-            const progressBars = document.querySelectorAll('.progress-bar[data-width]');
+        const animatedProgressBars = new Set();
+        function animateProgressBars(progressBars) {
             progressBars.forEach(bar => {
+                // Only animate each bar once
+                if (animatedProgressBars.has(bar)) return;
+                animatedProgressBars.add(bar);
+
                 const targetWidth = bar.getAttribute('data-width');
                 setTimeout(() => {
                     bar.style.width = targetWidth + '%';
