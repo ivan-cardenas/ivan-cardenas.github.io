@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog by Iván Cárdenas-León — thoughts on academia, GIS, career, and everything in between.">
+    <meta name="author" content="Iván Cárdenas-León">
+    <title>Blog | Iván Cárdenas-León</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Style.css">
+    <link rel="stylesheet" href="Assets/blog_style.css">
+</head>
+<body>
+
+    <!-- ── Navbar ── -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold; color: var(--primary-color);">IC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBlogIndex">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarBlogIndex">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Blog.html" style="color: var(--secondary-color); font-weight: 600;">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <header class="blog-index-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 animate-on-scroll fade-in-up">
+                    <h1>Blog</h1>
+                    <p>Thoughts on academia, GIS, career paths, and everything in between.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Posts ── -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Category filters -->
+            <div class="category-filters animate-on-scroll fade-in-up">
+                <a href="#" class="category-pill active" data-filter="all">All</a>
+                <a href="#" class="category-pill" data-filter="academia">Academia</a>
+            </div>
+
+            <!-- Post grid -->
+            <div class="row" id="post-grid">
+
+                <!-- Post 1: How did I land a PhD -->
+                <div class="col-md-6 col-lg-4 mb-4 post-item" data-category="academia">
+                    <div class="blog-card animate-on-scroll scale-in stagger-1">
+                        <div class="blog-card-accent cat-accent-academia"></div>
+                        <div class="blog-card-body">
+                            <span class="blog-card-category cat-academia">Academia</span>
+                            <a href="Blog/Academia/How_did_I_land_a_PhD.html" class="d-block blog-card-title">
+                                How did I land a PhD?
+                            </a>
+                            <p class="blog-card-excerpt">
+                                Doing a PhD was never in my path. I never considered doing one until the day I got an offer. This is not tips or how-to — this is just my experience, the luck, and the drama.
+                            </p>
+                            <div class="blog-card-footer">
+                                <span><i class="fas fa-clock mr-1"></i>8 min read</span>
+                                <a href="Blog/Academia/How_did_I_land_a_PhD.html" class="read-link">
+                                    Read <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder: more posts coming -->
+                <div class="col-md-6 col-lg-4 mb-4 post-item" data-category="">
+                    <div class="coming-soon-card animate-on-scroll scale-in stagger-2">
+                        <i class="fas fa-pen-nib"></i>
+                        <p style="margin:0; font-weight: 600;">More posts coming soon</p>
+                        <small>Stay tuned</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">Iván Cárdenas-León &copy; 2025</p>
+            <div>
+                <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social-item" href="mailto:ilcardenas26@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Category filter
+        document.querySelectorAll('.category-pill').forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                const filter = pill.dataset.filter;
+                document.querySelectorAll('.post-item').forEach(item => {
+                    const match = filter === 'all' || item.dataset.category === filter;
+                    item.style.display = match ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
