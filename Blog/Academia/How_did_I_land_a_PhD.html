@@ -61,48 +61,42 @@
       "keywords": ["PhD", "academia", "career", "GIS", "University of Twente"]
     }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="../../Assets/Style.css">
     <link rel="stylesheet" href="../../Assets/blog_style.css">
 </head>
 <body>
 
-    <!-- ── Navbar ── -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="../../index.html" style="font-weight: bold; color: var(--primary-color);">IC</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBlog">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarBlog">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">
-                            <i class="fas fa-arrow-left mr-1"></i>Back to Portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- ── Navigation ── -->
+    <nav class="nav" id="navbar">
+        <a href="../../index.html" class="nav__logo">ivan<span>.</span></a>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="../../index.html"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
+            <li><a href="../../index.html#about">About</a></li>
+            <li><a href="../../Blog.html" class="active">Blog</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- ── Hero ── -->
     <header class="blog-hero" id="top">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center animate-on-scroll fade-in-up">
-                    <span class="blog-category">Academia</span>
-                    <h1>How did I land a PhD?</h1>
-                    <div class="blog-meta">
-                        <span><i class="fas fa-user mr-1"></i>Iván Cárdenas-León</span>
-                        <span><i class="fas fa-clock mr-1"></i>8 min read</span>
-                        <span><i class="fas fa-tag mr-1"></i>PhD Life · Career</span>
-                    </div>
-                </div>
-            </div>
+        <span class="blog-category blog-reveal">Academia</span>
+        <h1 class="blog-reveal">How did I land a PhD?</h1>
+        <div class="blog-meta blog-reveal">
+            <span><i class="fas fa-user"></i> Iván Cárdenas-León</span>
+            <span><i class="fas fa-clock"></i> 8 min read</span>
+            <span><i class="fas fa-tag"></i> PhD Life &middot; Career</span>
         </div>
     </header>
 
@@ -251,17 +245,11 @@
     </main>
 
     <!-- ── Footer ── -->
-    <footer>
-        <div class="container text-center">
-            <p class="mb-2">Iván Cárdenas-León &copy; 2025</p>
-            <div>
-                <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="social-item" href="mailto:ilcardenas26@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>
+    <footer class="footer">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Iván Cárdenas-León</p>
+        <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:ilcardenas26@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
@@ -270,21 +258,32 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Scroll-triggered animations
+        // Scroll reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
+                    entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        document.querySelectorAll('.blog-reveal').forEach(el => observer.observe(el));
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile toggle
+        document.getElementById('nav-toggle').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav__links a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open'));
+        });
 
         // Back-to-top visibility
         const backToTop = document.getElementById('backToTop');

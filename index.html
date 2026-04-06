@@ -9,7 +9,7 @@
       gtag('js', new Date());
       gtag('config', 'G-PQ86RGTNRN');
     </script>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Iván Cárdenas-León — Geospatial Specialist & PhD Candidate at University of Twente, specializing in Digital Twins, Urban Planning, and GIS.">
     <meta name="author" content="Iván Cárdenas-León">
@@ -45,546 +45,650 @@
       "knowsAbout": ["GIS", "Digital Twins", "Urban Planning", "Remote Sensing", "Environmental Impact Assessment"]
     }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="Assets/Style.css">
 
     <meta name="google-site-verification" content="52-_BgyLt-pAYaKgX_rhFwinLBszolbk62l7hnNeMtY" />
-
-     
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="font-weight: bold; color: var(--primary-color);">IC</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>          
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="navbar">
+        <a href="#" class="nav__logo">Iván C<span>.</span></a>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
-    <header class="header" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7 infos">
-                    <h6 class="subtitle animate-on-scroll fade-in-up">Hello, I'm</h6>
-                    <h6 class="title" id="typing-text"></h6>
-                    <p class="animate-on-scroll fade-in-up stagger-2">Geospatial Specialist | PhD Candidate</p>
-                    <p class="animate-on-scroll fade-in-up stagger-3">Urban Planning | Digital Twins | Environmental Impact Assessment</p>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero__content">
+            <div class="hero__tag reveal">
+                <span class="dot"></span>
+                Open to opportunities
+            </div>
+            <h1 class="hero__name reveal reveal-delay-1">
+                Iván<br>Cárdenas-León<span class="cursor"></span>
+            </h1>
+            <p class="hero__title reveal reveal-delay-2">Geospatial Specialist &amp; PhD Candidate</p>
+            <p class="hero__subtitle reveal reveal-delay-3">Digital Twins &middot; Urban Planning &middot; Environmental Impact Assessment</p>
 
-                    <div class="buttons pt-4 animate-on-scroll fade-in-up stagger-4">
-                        <a href="mailto:ilcardenas26@gmail.com" class="btn btn-primary rounded mr-2">HIRE ME</a>
-                        <a href="#contact" class="btn btn-dark rounded">CONTACT ME</a>
-                    </div>      
-
-                    <div class="socials mt-4 animate-on-scroll fade-in-up stagger-5">
-                        <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <!-- <a class="social-item" href="tel:+31686185983"><i class="ti-mobile"></i></a> -->
-                        <a class="social-item" href="mailto:ilcardenas26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-
-            <div class="col-md-5 text-center">
-                    <!-- REPLACE THIS: Add your profile picture here -->
-                    <img src="Assets/Images/Profile_Pic.jpg" alt="Iván Cárdenas-León" class="profile-image">
-                    <!-- <div class="profile-placeholder"> -->
-                        <i class="ti-user"></i>
-                    </div>
+            <div class="hero__actions reveal reveal-delay-4">
+                <a href="mailto:ilcardenas26@gmail.com" class="btn btn--primary">
+                    <i class="fas fa-paper-plane"></i> Get in touch
+                </a>
+                <a href="#portfolio" class="btn btn--outline">View work</a>
             </div>
 
-            <div class="widget animate-on-scroll scale-in">
-                <div class="widget-item">
-                    <h2 class="counter" data-target="6">0</h2>
-                    <p>Years Experience</p>
+            <div class="hero__stats reveal reveal-delay-5">
+                <div class="hero__stat">
+                    <h3 class="counter" data-target="8">0</h3>
+                    <p>Years Exp.</p>
                 </div>
-                <div class="widget-item">
-                    <h2 class="counter" data-target="10">0</h2>
+                <div class="hero__stat">
+                    <h3 class="counter" data-target="10">0</h3>
                     <p>Clients</p>
                 </div>
-                <div class="widget-item">
-                    <h2 class="counter" data-target="500">0</h2>
-                    <p>Maps</p>
+                <div class="hero__stat">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Maps Created</p>
                 </div>
             </div>
         </div>
-    </header>
-    
-    <section id="about" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">About Me</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Geospatial Specialist & Researcher</h6>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="lead animate-on-scroll fade-in-up stagger-2">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. I am passionate about mapping usage for territorial solutions. I have over 6 years of experience in areas such as Territorial Development, Ordering Plans Cartography, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, Research and Environmental Impact Assessment.</p>
-                    
-                    <div class="row mt-5">
-                        <div class="col-md-6 animate-on-scroll fade-in">
-                            <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Education</h5>
-                            <div class="experience-card">
-                                <h5>PhD Candidate</h5>
-                                <p class="period">October 2023 - Present</p>
-                                <p>University of Twente - Urban Planning and Management Department<br>Research: Digital Twins as Enhanced 3D Planning Support Systems</p>
-                            </div>
-                            <div class="experience-card">
-                                <h5>MSc Geo-Information Science</h5>
-                                <p class="period">September 2021 - July 2023</p>
-                                <p>University of Twente - ITC, Enschede, Netherlands<br><span class="achievement-badge">Cum Laude</span> 
-                            </div>
-                            <div class="experience-card">
-                                <h5>PG-D GIS Specialist</h5>
-                                <p class="period">April 2017 - November 2017</p>
-                                <p>Universidad Distrital Francisco José de Caldas, Bogotá, Colombia</p> 
-                                <span class="achievement-badge">9.3 Final Mark</span></p>
-                            </div>
-                            <div class="experience-card">
-                                <h5>BEng Environmental and Sanitary</h5>
-                                <p class="period">2009 - 2015</p>
-                                <p>Universidad de La Salle, Bogotá, Colombia</p>
-                                <span class="achievement-badge">Top 7%</span></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 animate-on-scroll fade-in">
-                            <h5 class="mb-3" style="color: var(--primary-color); font-weight: 600;">Languages</h5>
-                            <div class="skill-item">
-                                <h6>Spanish (Native)</h6>
-                                <div class="progress">
-                                    <div class="progress-bar" data-width="100">Native</div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <h6>English (C2)</h6>
-                                <div class="progress">
-                                    <div class="progress-bar" data-width="95">C2</div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <h6>Portuguese (A2)</h6>
-                                <div class="progress">
-                                    <div class="progress-bar" data-width="40">A2</div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <h6>Dutch (A1)</h6>
-                                <div class="progress">
-                                    <div class="progress-bar" data-width="20">A1</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="btn btn-primary animate-on-scroll fade-in-up stagger-3" style="margin: 10px auto; display: block; width: 200px;" href="\Pages\About-me.html">Know More</a>
     </section>
 
-    <section id="experience" class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">Experience</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Professional Journey</h6>
+    <!-- ===== ABOUT ===== -->
+    <section class="section section--alt" id="about">
+        <div class="section__header reveal">
+            <p class="section__label">About</p>
+            <h2 class="section__title">Geospatial Specialist &amp; Researcher</h2>
+        </div>
+
+        <div class="about__grid">
+            <div class="about__column reveal">
+                <p class="about__text">I am a Geospatial specialist focused on Urban Planning and Environmental Impact. Passionate about mapping usage for territorial solutions, with over 6 years of experience in Territorial Development, Geodatabase structure, Hydrological modeling, Spatial analysis, Remote Sensing, and Environmental Impact Assessment.</p>
+
+                <h4>Education</h4>
+
+                <div class="edu-item">
+                    <h5>PhD Candidate</h5>
+                    <span class="period">Oct 2023 &mdash; Present</span>
+                    <p>University of Twente &mdash; Digital Twins as Enhanced 3D Planning Support Systems</p>
+                </div>
+                <div class="edu-item">
+                    <h5>MSc Geo-Information Science</h5>
+                    <span class="period">Sep 2021 &mdash; Jul 2023</span>
+                    <p>University of Twente &mdash; ITC, Enschede</p>
+                    <span class="badge">Cum Laude</span>
+                </div>
+                <div class="edu-item">
+                    <h5>PG-D GIS Specialist</h5>
+                    <span class="period">Apr 2017 &mdash; Nov 2017</span>
+                    <p>Universidad Distrital Francisco José de Caldas</p>
+                    <span class="badge">9.3 Final Mark</span>
+                </div>
+                <div class="edu-item">
+                    <h5>BEng Environmental &amp; Sanitary</h5>
+                    <span class="period">2009 &mdash; 2015</span>
+                    <p>Universidad de La Salle, Bogotá</p>
+                    <span class="badge">Top 7%</span>
+                </div>
+
+                <a href="Pages/About-me.html" class="link-arrow">Learn more about me <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="experience-card">
-                        <h5>Doctoral Researcher</h5>
-                        <p class="period">October 2023 - Present | University of Twente</p>
-                        <p>Doctorate candidate on the Urban Planning and Management Department. Research
-project focuses on Digital Twins as an enhanced 3D Planning Support System.</p>
-                        <p><strong>Skills:</strong> Digital Twins, Urban Planning, Research</p>
+
+            <div class="about__column reveal reveal-delay-2">
+                <h4>Languages</h4>
+
+                <div class="lang-bar">
+                    <div class="lang-bar__header">
+                        <span>Spanish</span><span>Native</span>
+                    </div>
+                    <div class="lang-bar__track">
+                        <div class="lang-bar__fill" data-width="100"></div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="experience-card">
-                        <h5>Natural Capital Intern</h5>
-                        <p class="period">April 2023 - August 2023 | Philips</p>
-                        <p>Developed an interactive map featuring global manufacturing sites, land use, and biodiversity improvement projects. Integrated data from external sources and remote sensing using Mapbox, HTML, CSS, and JavaScript.</p>
-                        <p><strong>Skills:</strong> Data Integration, Web Mapping, Data Visualization</p>
+                <div class="lang-bar">
+                    <div class="lang-bar__header">
+                        <span>English</span><span>C2</span>
+                    </div>
+                    <div class="lang-bar__track">
+                        <div class="lang-bar__fill" data-width="95"></div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="experience-card">
-                        <h5>Student Assistant</h5>
-                        <p class="period">January 2023 - August 2023 | University of Twente</p>
-                        <p>Leading role in designing a tool for measuring Urban Heat Island and Perceived Body Temperature within a 3D environment. Part of a collaborative project between University of Twente and Vrij Universiteit Amsterdam.</p>
-                        <p><strong>Skills:</strong> Research, Urban Planning, Data Visualization, Digital Twins</p>
+                <div class="lang-bar">
+                    <div class="lang-bar__header">
+                        <span>Portuguese</span><span>A2</span>
+                    </div>
+                    <div class="lang-bar__track">
+                        <div class="lang-bar__fill" data-width="40"></div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="experience-card">
-                        <h5>Freelancer - Geographic Information Systems Analyst </h5>
-                        <p class="period">March 2016 - August 2021</p>
-                        <p>Geospatial Consultant providing services in spatial information management and analysis. Worked with multiple clients including Terrasos, Ingema Limitada, Geocol Consultores S.A, Valoración Económica Ambiental S.A.S., P&P Gestión Integral, and Duitama City Hall.</p>
-                        <p><strong>Key Competencies:</strong> Cartographic Styling, Data Quality, Environmental Analysis, Geospatial Data Management, Hydrological Modeling, Remote Sensing, Risk Assessment, Spatial Analysis, Stakeholder Engagement, Territorial Planning, UAV Mapping</p>
+                <div class="lang-bar">
+                    <div class="lang-bar__header">
+                        <span>Dutch</span><span>A1</span>
+                    </div>
+                    <div class="lang-bar__track">
+                        <div class="lang-bar__fill" data-width="20"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">Skills</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Technical Expertise</h6>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="custom-card card border animate-on-scroll scale-in stagger-1">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-layer-group"></i>
-                            <h5>Mapping Software</h5>
-                            <p class="mt-3">ArcGIS Pro, ArcMap, ESRI Suite, QGIS, Mapbox</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="custom-card card border animate-on-scroll scale-in stagger-2">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-code"></i>
-                            <h5>Programming</h5>
-                            <p class="mt-3">Python, HTML5, CSS, JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-md-4 mb-4">
-                    <div class="custom-card card border animate-on-scroll scale-in stagger-3">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-marker"></i>
-                            <h5>Graphic Design</h5>
-                            <p class="mt-3">Adobe Illustrator, InDesign, Blender</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md mb-4">
-                    <div class="custom-card card border animate-on-scroll scale-in stagger-4">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-satellite"></i>
-                            <h5>Remote Sensing</h5>
-                            <p class="mt-3">Imagery Analysis, UAV Mapping, Data Collection</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md mb-4">
-                    <div class="custom-card card border animate-on-scroll scale-in stagger-5">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-chart-line"></i>
-                            <h5>Spatial Analysis</h5>
-                            <p class="mt-3">Geospatial Modeling, Risk Assessment, Territorial Planning</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-4 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body text-center">
-                            <i class="icon fa-solid fa-arrow-up-from-water-pump"></i>
-                            <h5>Hydrological Modeling</h5>
-                            <p class="mt-3">HEC-HMS, HEC-RAS</p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience">
+        <div class="section__header reveal">
+            <p class="section__label">Experience</p>
+            <h2 class="section__title">Professional Journey</h2>
         </div>
-    </section>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">Portfolio</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Featured Projects</h6>
-                <p class="animate-on-scroll fade-in-up stagger-2">Explore my interactive dashboards and data visualization projects</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-card animate-on-scroll scale-in stagger-1">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial">
-                        <div class="portfolio-overlay">
-                            <h5>Dashboard Tutorial</h5>
-                            <p>Small Lecture on creating spatial interactive dashboards with Streamlit</p>
-                            <a href="https://ivan-cardenas.github.io/Dashboard-Tutorial/" target="_blank" class="btn rounded">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
-                        </div>
-                    </div>
+        <div class="timeline">
+            <div class="timeline__item reveal">
+                <h4>Doctoral Researcher</h4>
+                <p class="meta">Oct 2023 &mdash; Present &middot; University of Twente</p>
+                <p>Research project on Digital Twins as an enhanced 3D Planning Support System for urban planning.</p>
+                <div class="tags">
+                    <span class="tag">Digital Twins</span>
+                    <span class="tag">Urban Planning</span>
+                    <span class="tag">Research</span>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-card animate-on-scroll scale-in stagger-2">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data">
-                        <div class="portfolio-overlay">
-                            <h5>Research Papers Data</h5>
-                            <p>Comprehensive data visualization and analysis of research publications and academic contributions</p>
-                            <a href="https://ivan-cardenas.github.io/PapersData/" target="_blank" class="btn rounded">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
-                        </div>
-                    </div>
+            </div>
+            <div class="timeline__item reveal reveal-delay-1">
+                <h4>Natural Capital Intern</h4>
+                <p class="meta">Apr 2023 &mdash; Aug 2023 &middot; Philips</p>
+                <p>Developed interactive maps of global manufacturing sites, land use, and biodiversity projects using Mapbox, HTML, CSS, and JavaScript.</p>
+                <div class="tags">
+                    <span class="tag">Data Integration</span>
+                    <span class="tag">Web Mapping</span>
+                    <span class="tag">Visualization</span>
+                </div>
+            </div>
+            <div class="timeline__item reveal reveal-delay-2">
+                <h4>Student Assistant</h4>
+                <p class="meta">Jan 2023 &mdash; Aug 2023 &middot; University of Twente</p>
+                <p>Designed a tool for measuring Urban Heat Island and Perceived Body Temperature within a 3D environment. Collaboration between University of Twente and Vrije Universiteit Amsterdam.</p>
+                <div class="tags">
+                    <span class="tag">Research</span>
+                    <span class="tag">3D Visualization</span>
+                    <span class="tag">Digital Twins</span>
+                </div>
+            </div>
+            <div class="timeline__item reveal reveal-delay-3">
+                <h4>Freelance GIS Analyst</h4>
+                <p class="meta">Mar 2016 &mdash; Aug 2021</p>
+                <p>Geospatial Consultant providing spatial information management and analysis for multiple clients including Terrasos, Ingema, Geocol Consultores, and Duitama City Hall.</p>
+                <div class="tags">
+                    <span class="tag">Spatial Analysis</span>
+                    <span class="tag">Remote Sensing</span>
+                    <span class="tag">Cartography</span>
+                    <span class="tag">UAV Mapping</span>
+                    <span class="tag">Territorial Planning</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">Achievements</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Recognition & Awards</h6>
+    <!-- ===== SKILLS ===== -->
+    <section class="section section--alt" id="skills">
+        <div class="section__header reveal">
+            <p class="section__label">Skills</p>
+            <h2 class="section__title">Technical Expertise</h2>
+        </div>
+
+        <div class="skills__grid">
+            <div class="skill-card reveal">
+                <i class="fas fa-globe-americas skill-card__icon"></i>
+                <h4>Geospatial</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/PostGIS-green?style=for-the-badge&logo=postgresql&labelColor=green&color=darkgreen" alt="PostGIS">
+                    <img src="https://img.shields.io/badge/GeoDjango-green?style=for-the-badge&logo=django&labelColor=darkgreen&color=%23092E20" alt="GeoDjango">
+                    <img src="https://img.shields.io/badge/geoserver-cyan?style=for-the-badge&labelColor=darkgreen" alt="GeoServer">
+                    <img src="https://img.shields.io/badge/TiTiler-orange?style=for-the-badge" alt="TiTiler">
+                    <img src="https://img.shields.io/badge/ArcGIS-2C7AC3.svg?style=for-the-badge&logo=ArcGIS&logoColor=white" alt="ArcGIS">
+                    <img src="https://img.shields.io/badge/QGIS-589632.svg?style=for-the-badge&logo=QGIS&logoColor=white" alt="QGIS">
+                    <img src="https://img.shields.io/badge/ESRI-000000.svg?style=for-the-badge&logo=ESRI&logoColor=white" alt="ESRI">
+                    <img src="https://img.shields.io/badge/Mapbox-000000.svg?style=for-the-badge&logo=Mapbox&logoColor=white" alt="Mapbox">
+                    <img src="https://img.shields.io/badge/Cesium-6CADDF.svg?style=for-the-badge&logo=Cesium&logoColor=white" alt="CesiumJS">
+                    <img src="https://img.shields.io/badge/HEC%20RAS-red?style=for-the-badge" alt="HEC RAS">
+                    <img src="https://img.shields.io/badge/HEC%20HMS-red?style=for-the-badge" alt="HEC HMS">
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card border h-100 animate-on-scroll scale-in stagger-1">
-                        <div class="card-body">
-                            <span class="achievement-badge">1st Place</span>
-                            <h5 class="mt-3">Map Gallery Best Cartography</h5>
-                            <p class="text-muted">2020 | ESRI Colombia</p>
-                            <p>Recognized for excellence in cartographic design and visualization.</p>
-                        </div>
-                    </div>
+            <div class="skill-card reveal reveal-delay-1">
+                <i class="fas fa-database skill-card__icon"></i>
+                <h4>Backend &amp; Data</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white" alt="Python">
+                    <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django">
+                    <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+                    <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+                    <img src="https://img.shields.io/badge/GeoPandas-139C5A.svg?style=for-the-badge&logo=GeoPandas&logoColor=white" alt="GeoPandas">
+                    <img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit">
+                    <img src="https://img.shields.io/badge/Holoviz%20Panel-blue?style=for-the-badge" alt="Holoviz Panel">
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card border h-100 animate-on-scroll scale-in stagger-2">
-                        <div class="card-body">
-                            <span class="achievement-badge">Scholarship</span>
-                            <h5 class="mt-3">Excellence Scholarship</h5>
-                            <p class="text-muted">2020 | University of Twente</p>
-                            <p>Awarded for academic excellence to pursue MSc degree.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-2">
+                <i class="fas fa-code skill-card__icon"></i>
+                <h4>Frontend</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white" alt="HTML5">
+                    <img src="https://img.shields.io/badge/CSS-663399.svg?style=for-the-badge&logo=CSS&logoColor=white" alt="CSS3">
+                    <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" alt="Tailwind CSS">
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card border h-100 animate-on-scroll scale-in stagger-3">
-                        <div class="card-body">
-                            <span class="achievement-badge">1st Place</span>
-                            <h5 class="mt-3">Digital Twin Hackathon</h5>
-                            <p class="text-muted">2021 | University of the Witwatersrand, Johannesburg</p>
-                            <p>Winner for innovative digital twin solution development.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-3">
+                <i class="fas fa-pen-nib skill-card__icon"></i>
+                <h4>Design &amp; Visualization</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white" alt="Adobe Illustrator">
+                    <img src="https://img.shields.io/badge/Adobe%20InDesign-FF3366.svg?style=for-the-badge&logo=adobeindesign&logoColor=white" alt="Adobe InDesign">
+                    <img src="https://img.shields.io/badge/Blender-E87D0D.svg?style=for-the-badge&logo=blender&logoColor=white" alt="Blender">
+                    <img src="https://img.shields.io/badge/Cartographic%20Styling-4A4A4A?style=for-the-badge" alt="Cartographic Styling">
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card border h-100 animate-on-scroll scale-in stagger-4">
-                        <div class="card-body">
-                            <span class="achievement-badge">2nd Place</span>
-                            <h5 class="mt-3">Best Master Thesis</h5>
-                            <p class="text-muted">2023 | Geo-Informatie Nederland (GIN)</p>
-                            <p>Recognized for outstanding research in Geo-information sciences.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-4">
+                <i class="fas fa-robot skill-card__icon"></i>
+                <h4>LLM &amp; AI Tools</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/Agentic%20AI-7C3AED?style=for-the-badge" alt="Agentic AI">
+                    <img src="https://img.shields.io/badge/Chatbots-0EA5E9?style=for-the-badge" alt="Chatbots">
+                    <img src="https://img.shields.io/badge/Image%20Gen%20AI-EC4899?style=for-the-badge" alt="Image Generative AI">
+                    <img src="https://img.shields.io/badge/Whisper-412991.svg?style=for-the-badge&logo=openai&logoColor=white" alt="Whisper">
+                    <img src="https://img.shields.io/badge/Ollama-000000.svg?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama">
+                </div>
+            </div>
+            <div class="skill-card reveal reveal-delay-5">
+                <i class="fas fa-tools skill-card__icon"></i>
+                <h4>Others</h4>
+                <div class="skill-card__badges">
+                    <img src="https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                    <img src="https://img.shields.io/badge/GitHub%20Pages-222222.svg?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages">
+                    <img src="https://img.shields.io/badge/Shopify-7AB55C.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Shopify">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle animate-on-scroll fade-in-up">Contact</h6>
-                <h6 class="section-title animate-on-scroll fade-in-up stagger-1">Get In Touch</h6>
-                <p class="animate-on-scroll fade-in-up stagger-2">I'm always open to discussing new projects, opportunities, or collaborations.</p>
-            </div>
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section" id="portfolio">
+        <div class="section__header reveal">
+            <p class="section__label">Portfolio</p>
+            <h2 class="section__title">Featured Projects</h2>
+            <p class="section__desc">Interactive dashboards and data visualization projects</p>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="contact-infos">
-                        <div class="item">
-                            <i class="fa-solid  fa-location-arrow"></i>
-                            <div>
-                                <h5>Location</h5>
-                                <p>Amsterdam, North Holland, Netherlands</p>
-                            </div>                          
-                        </div>
-                        <!-- <div class="item">
-                            <i class="ti-mobile"></i>
-                            <div>
-                                <h5>Phone Number</h5>
-                                <p>+31 686185983</p>
-                            </div>                          
-                        </div> -->
-                        <div class="item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <h5>Email Address</h5>
-                                <p>ilcardenas26@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="fab fa-linkedin"></i>
-                            <div>
-                                <h5>LinkedIn</h5>
-                                <p><a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank">linkedin.com/in/ivancardenasleon</a></p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="portfolio__grid">
+            <div class="project-card reveal">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>Dashboard Tutorial</h4>
+                    <p>A lecture on creating spatial interactive dashboards with Streamlit for geospatial data visualization.</p>
+                    <a href="https://ivan-cardenas.github.io/Dashboard-Tutorial/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>Research Papers Data</h4>
+                    <p>Comprehensive data visualization and analysis of research publications and academic contributions.</p>
+                    <a href="https://ivan-cardenas.github.io/PapersData/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Iván Cárdenas-León. All rights reserved.</p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="socials text-right">
-                        <a class="social-item" href="https://www.linkedin.com/in/ivancardenasleon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a class="social-item" href="mailto:ilcardenas26@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                        <!-- <a class="social-item" href="tel:+31686185983"><i class="ti-mobile"></i></a> -->
-                    </div>
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="section section--alt" id="achievements">
+        <div class="section__header reveal">
+            <p class="section__label">Achievements</p>
+            <h2 class="section__title">Recognition &amp; Awards</h2>
+        </div>
+
+        <div class="achievements__grid">
+            <div class="achievement-card reveal">
+                <span class="badge">1st Place</span>
+                <h4>Map Gallery Best Cartography</h4>
+                <p class="meta">2020 &middot; ESRI Colombia</p>
+                <p>Recognized for excellence in cartographic design and visualization.</p>
+            </div>
+            <div class="achievement-card reveal reveal-delay-1">
+                <span class="badge">Scholarship</span>
+                <h4>Excellence Scholarship</h4>
+                <p class="meta">2020 &middot; University of Twente</p>
+                <p>Awarded for academic excellence to pursue MSc degree.</p>
+            </div>
+            <div class="achievement-card reveal reveal-delay-2">
+                <span class="badge">1st Place</span>
+                <h4>Digital Twin Hackathon</h4>
+                <p class="meta">2021 &middot; University of the Witwatersrand</p>
+                <p>Winner for innovative digital twin solution development.</p>
+            </div>
+            <div class="achievement-card reveal reveal-delay-3">
+                <span class="badge">2nd Place</span>
+                <h4>Best Master Thesis</h4>
+                <p class="meta">2023 &middot; Geo-Informatie Nederland (GIN)</p>
+                <p>Outstanding research in Geo-information sciences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+        <div class="section__header reveal">
+            <p class="section__label">Contact</p>
+            <h2 class="section__title">Get In Touch</h2>
+            <p class="section__desc">Always open to discussing new projects, opportunities, or collaborations.</p>
+        </div>
+
+        <div class="contact__grid">
+            <div class="contact-item reveal">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <h5>Location</h5>
+                    <p>Amsterdam, Netherlands</p>
                 </div>
             </div>
+            <div class="contact-item reveal reveal-delay-1">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h5>Email</h5>
+                    <p><a href="mailto:ilcardenas26@gmail.com">ilcardenas26@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact-item reveal reveal-delay-2">
+                <i class="fab fa-linkedin"></i>
+                <div>
+                    <h5>LinkedIn</h5>
+                    <p><a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank">ivancardenasleon</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Iván Cárdenas-León</p>
+        <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:ilcardenas26@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script>
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    // ===== THREE.JS HERO SCENE =====
+    (function() {
+        const canvas = document.getElementById('hero-canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
+        camera.position.z = 3.5;
 
-                    // Trigger counter animation for widget counters
-                    if (entry.target.classList.contains('widget')) {
-                        animateCounters();
-                    }
+        // Mouse tracking
+        const mouse = { x: 0, y: 0, target: { x: 0, y: 0 } };
 
-                    // Trigger progress bar animation
-                    const progressBars = entry.target.querySelectorAll('.progress-bar[data-width]');
-                    if (progressBars.length > 0) {
-                        animateProgressBars(progressBars);
-                    }
+        // --- WIREFRAME GLOBE ---
+        const globeGeo = new THREE.IcosahedronGeometry(1.2, 3);
+        const globeMat = new THREE.MeshBasicMaterial({
+            color: 0x00d4aa,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.12
+        });
+        const globe = new THREE.Mesh(globeGeo, globeMat);
+        scene.add(globe);
+
+        // --- GLOBE DOTS (vertices as points) ---
+        const dotGeo = new THREE.BufferGeometry();
+        const vertices = globeGeo.attributes.position.array;
+        dotGeo.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+        const dotMat = new THREE.PointsMaterial({
+            color: 0x00d4aa,
+            size: 0.025,
+            transparent: true,
+            opacity: 0.6,
+            sizeAttenuation: true
+        });
+        const dots = new THREE.Points(dotGeo, dotMat);
+        scene.add(dots);
+
+        // --- FLOATING PARTICLES ---
+        const particleCount = 200;
+        const positions = new Float32Array(particleCount * 3);
+        const velocities = [];
+
+        for (let i = 0; i < particleCount; i++) {
+            const r = 1.8 + Math.random() * 3;
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+
+            positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+            positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+            positions[i * 3 + 2] = r * Math.cos(phi);
+
+            velocities.push({
+                x: (Math.random() - 0.5) * 0.002,
+                y: (Math.random() - 0.5) * 0.002,
+                z: (Math.random() - 0.5) * 0.002
+            });
+        }
+
+        const particleGeo = new THREE.BufferGeometry();
+        particleGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+        const particleMat = new THREE.PointsMaterial({
+            color: 0x00d4aa,
+            size: 0.015,
+            transparent: true,
+            opacity: 0.4,
+            sizeAttenuation: true
+        });
+        const particles = new THREE.Points(particleGeo, particleMat);
+        scene.add(particles);
+
+        // --- ORBITAL RINGS ---
+        for (let i = 0; i < 3; i++) {
+            const ringGeo = new THREE.RingGeometry(1.5 + i * 0.4, 1.51 + i * 0.4, 80);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: 0x00d4aa,
+                transparent: true,
+                opacity: 0.06,
+                side: THREE.DoubleSide
+            });
+            const ring = new THREE.Mesh(ringGeo, ringMat);
+            ring.rotation.x = Math.PI * 0.35 + i * 0.3;
+            ring.rotation.y = i * 0.5;
+            scene.add(ring);
+        }
+
+        // --- RESIZE ---
+        function resize() {
+            const hero = document.querySelector('.hero');
+            const w = hero.offsetWidth;
+            const h = hero.offsetHeight;
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        // --- MOUSE ---
+        window.addEventListener('mousemove', (e) => {
+            mouse.target.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.target.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        // --- ANIMATE ---
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Smooth mouse follow
+            mouse.x += (mouse.target.x - mouse.x) * 0.05;
+            mouse.y += (mouse.target.y - mouse.y) * 0.05;
+
+            // Globe rotation
+            globe.rotation.y += 0.002;
+            globe.rotation.x += 0.0005;
+            dots.rotation.y = globe.rotation.y;
+            dots.rotation.x = globe.rotation.x;
+
+            // Mouse influence on globe tilt
+            globe.rotation.x += mouse.y * 0.003;
+            globe.rotation.z = mouse.x * 0.1;
+            dots.rotation.x = globe.rotation.x;
+            dots.rotation.z = globe.rotation.z;
+
+            // Particle drift
+            const posArr = particleGeo.attributes.position.array;
+            for (let i = 0; i < particleCount; i++) {
+                posArr[i * 3]     += velocities[i].x;
+                posArr[i * 3 + 1] += velocities[i].y;
+                posArr[i * 3 + 2] += velocities[i].z;
+
+                // Boundary wrap
+                const dist = Math.sqrt(
+                    posArr[i * 3] ** 2 +
+                    posArr[i * 3 + 1] ** 2 +
+                    posArr[i * 3 + 2] ** 2
+                );
+                if (dist > 5) {
+                    posArr[i * 3]     *= 0.4;
+                    posArr[i * 3 + 1] *= 0.4;
+                    posArr[i * 3 + 2] *= 0.4;
                 }
-            });
-        }, observerOptions);
-
-        // Observe all elements with animate-on-scroll class
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            animatedElements.forEach(el => observer.observe(el));
-        });
-
-        // Counter animation for stats widget
-        let countersAnimated = false;
-        function animateCounters() {
-            if (countersAnimated) return;
-            countersAnimated = true;
-
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000; // 2 seconds
-                const increment = target / (duration / 16); // 60fps
-                let current = 0;
-
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target;
-                        // Add suffix for specific counters
-                        if (target === 6) counter.textContent = '6+';
-                        if (target === 10) counter.textContent = '+10';
-                        if (target === 500) counter.textContent = '+500';
-                    }
-                };
-                updateCounter();
-            });
-        }
-
-        // Progress bar animation
-        const animatedProgressBars = new Set();
-        function animateProgressBars(progressBars) {
-            progressBars.forEach(bar => {
-                // Only animate each bar once
-                if (animatedProgressBars.has(bar)) return;
-                animatedProgressBars.add(bar);
-
-                const targetWidth = bar.getAttribute('data-width');
-                setTimeout(() => {
-                    bar.style.width = targetWidth + '%';
-                }, 100);
-            });
-        }
-
-        // Typing animation for main title
-        const typingText = document.getElementById('typing-text');
-        const textToType = 'Iván Cárdenas-León';
-        let charIndex = 0;
-
-        function typeText() {
-            if (charIndex < textToType.length) {
-                typingText.textContent += textToType.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeText, 100); // Typing speed
-            } else {
-                // Add blinking cursor after typing is complete
-                const cursor = document.createElement('span');
-                cursor.className = 'typing-cursor';
-                cursor.innerHTML = '&nbsp;';
-                typingText.appendChild(cursor);
             }
+            particleGeo.attributes.position.needsUpdate = true;
+
+            // Camera subtle movement
+            camera.position.x = mouse.x * 0.3;
+            camera.position.y = mouse.y * 0.3;
+            camera.lookAt(0, 0, 0);
+
+            renderer.render(scene, camera);
         }
+        animate();
+    })();
 
-        // Start typing animation when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(typeText, 500); // Start after 500ms delay
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ===== COUNTER ANIMATION =====
+    let countersAnimated = false;
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !countersAnimated) {
+                countersAnimated = true;
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const target = parseInt(counter.dataset.target);
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+
+                    function update() {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(update);
+                        } else {
+                            if (target === 6)   counter.textContent = '6+';
+                            else if (target === 10)  counter.textContent = '10+';
+                            else if (target === 500) counter.textContent = '500+';
+                            else counter.textContent = target;
+                        }
                     }
+                    update();
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.hero__stats').forEach(el => statsObserver.observe(el));
+
+    // ===== LANGUAGE BAR ANIMATION =====
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.lang-bar__fill').forEach(bar => {
+                    setTimeout(() => {
+                        bar.style.width = bar.dataset.width + '%';
+                    }, 200);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.about__column').forEach(el => barObserver.observe(el));
+
+    // ===== NAVBAR =====
+    // Scroll styling
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile toggle
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+        document.getElementById('nav-links').classList.toggle('open');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav__links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-links').classList.remove('open');
+        });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
-            });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.15)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
             }
         });
+    });
     </script>
 
 </body>
