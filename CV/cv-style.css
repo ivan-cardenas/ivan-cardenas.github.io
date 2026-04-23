@@ -23,13 +23,13 @@
 /* ── Base ──────────────────────────────────────── */
 body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 9pt;
+  font-size: 8pt;
   font-weight: 300;
   line-height: 1.55;
   color: var(--text);
   text-align: justify;
   hyphens: auto;
-  column-count: 2;
+  column-count: 1;
   column-gap: 36px;
   column-rule: 0.5px solid var(--rule);
 }

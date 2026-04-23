@@ -1,16 +1,16 @@
 ---
 pdf_options:
   format: A4
-  margin: 10mm 16mm
+  margin: 10mm 12mm
 stylesheet: cv-style.css
 ---
 <table style="border:none; margin-bottom: 16px;">
   <tr>
     <td style="border:none; width:110px; vertical-align:top; padding-right:20px;">
-      <img src="photo.bmp" width="130" style="border-radius:50%;">
+      <img src="..\Assets\Images\Profile_Pic.jpg" width="130" style="border-radius:50%;">
     </td>
     <td style="border:none; vertical-align:top;">
-      <h1 style="margin:0; color:#1a1a1a;">Iván Cárdenas</h1>
+      <h1 style="margin:0; color:#1a1a1a; font-style:bold;">Iván Cárdenas</h1>
       <p style="margin:4px 0; color:#C0392B; font-size:11pt;">
         Geospatial Specialist · PhD Candidate
       </p>
@@ -36,7 +36,7 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 ## Experience
 
 ### PhD Candidate
-**ITC — University of Twente**, Enschede, NL · *10/2023 – Present · 2 yrs 6 mo*
+**ITC — University of Twente**, Enschede, NL · *10/2023 - Present · 2 yrs 6 mo*
 
 *Urban Digital Twins · DPSIR framework · Directed Acyclic Graphs · Python · GeoDjango · PostGIS · React · TiTiler · ArcGIS · Claude Code*
 
@@ -49,7 +49,7 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 ---
 
 ### Student Assistant
-**ITC — University of Twente × Vrije Universiteit Amsterdam**, Enschede, NL · *01/2023 – 08/2023 · 8 mo*
+**ITC — University of Twente × Vrije Universiteit Amsterdam**, Enschede, NL · *01/2023 - 08/2023 · 8 mo*
 
 *Urban Heat Modeling · ArcGIS · Python · Arcpy · Experience Builder*
 
@@ -60,7 +60,7 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 ---
 
 ### Natural Capital Intern
-**Koninklijke Philips N.V**, Amsterdam, NL · *04/2023 – 08/2023 · 5 mo*
+**Koninklijke Philips N.V**, Amsterdam, NL · *04/2023 - 08/2023 · 5 mo*
 
 *Web-GIS · Mapbox GL · HTML · CSS · JavaScript*
 
@@ -71,7 +71,7 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 ---
 
 ### Geographic Information System Analyst
-**Freelancer**, Bogotá, CO · *03/2016 – 08/2021 · 5 yrs 5 mo*
+**Freelancer**, Bogotá, CO · *03/2016 - 08/2021 · 5 yrs 5 mo*
 
 *Clients: Terrasos · ISA Intercolombia · Anglogold Ashanti · Ingema Limitada · MUZO Emerald Colombia · Acerías Paz del Río · Gran Tierra Energy · Transportadora de Gas Internacional · Cundinamarca Regional Government · Duitama City Hall*
 
@@ -90,7 +90,8 @@ Geospatial Consultant for 10 major clients across urban planning, environmental 
 
 ### **MSc Geo-Information Science and Earth Observation - Specialisation in Urban Planning**
 
-University of Twente · *09/2021 – 07/2023*
+University of Twente · *09/2021 - 07/2023*
+
 Cum Laude · 9.0/10.0 GPA · ITC Excellence Scholarship 2021
 
 *Thesis: From Trash To Digital Treasure: Urban Digital Twinning for Solid Waste Management. A Case Study in the City of Tshwane, South Africa.*
@@ -99,7 +100,8 @@ Recipient of the second-best Master's Thesis in Geoinformation in the Netherland
 
 ### **Postgraduate Specialisation — Geographical Information Systems**
 
-Universidad Distrital Francisco José de Caldas · *04/2019 – 11/2019*
+Universidad Distrital Francisco José de Caldas · *04/2019 - 11/2019*
+
 9.3/10.0 GPA · Top 5% of same program and academic period
 
 *Dissertation: Pilot Application for Real Estate Price Consultation and Quick Appraisal Based on Spatial Variables in the City of Bogotá.*
@@ -108,7 +110,8 @@ Relevant coursework: Geospatial Database Design, Spatial Statistics, Remote Sens
 
 ### **BEng Environmental and Sanitary Engineering**
 
-Universidad de La Salle · *01/2009 – 04/2015* 
+Universidad de La Salle · *01/2009 - 04/2015* 
+
 7.6/10.0 GPA · Top 7% of same program and academic period 
 
 *Dissertation: Evaluation of Pulverised Rubber as a Raw Material in the Production of Roof Tiles as an Environmental Alternative for the Management of Used Tyres*
@@ -118,17 +121,18 @@ Universidad de La Salle · *01/2009 – 04/2015*
 ## Teaching
 
 ### Course Instructor
-**UNIGIS — Vrije Universiteit Amsterdam** · *2024 – 2025*
+**UNIGIS — Vrije Universiteit Amsterdam** · *2024 - 2025*
 
 - Digital Twin, MSc Geographical Information Sciences — 2024, 2025
 
 ### Guest Lecturer
-**University of Twente** · *2024 – 2025*
+**University of Twente** · *2024 - 2025*
 
 - Digital Twin Dashboard Workshop · 3D Modelling for City Digital Twins (2025)
-- Urban Heat Modelling · Climate Transition in the IJssel Delta (2024–2025)
+- Urban Heat Modelling · Climate Transition in the IJssel Delta (2024-2025)
 
 ### Teaching Assistant
+
 **University of Twente** · *2024*
 
 - 3D Modelling for City Digital Twins
