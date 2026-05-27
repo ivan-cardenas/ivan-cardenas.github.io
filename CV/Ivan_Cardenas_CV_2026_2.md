@@ -10,12 +10,13 @@ stylesheet: cv-style.css
       <img src="..\Assets\Images\Profile_Pic.jpg" width="130" style="border-radius:50%;">
     </td>
     <td style="border:none; vertical-align:top;">
-      <h1 style="margin:0; color:#1a1a1a; font-style:bold;">Iván Cárdenas</h1>
+      <h1 style="margin:0; color:#1a1a1a; font-style:bold;">Iván Cárdenas León</h1>
       <p style="margin:4px 0; color:#C0392B; font-size:11pt;">
         Geospatial Specialist · PhD Candidate
       </p>
       <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:#C0392B;">linkedin.com/in/ivancardenasleon</a><br>
       <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:#C0392B;">ilcardenas26@gmail.com</a><br>
+      <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:#C0392B;"> github.com/ivan-cardenas/</a><br>
       <a href="tel:+310686185983" style="text-decoration:none; color:#C0392B;">+31 0686185983</a>
     </td>
     <td style="border:none; width:110px; vertical-align:top; text-align:right;">
