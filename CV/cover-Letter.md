@@ -7,22 +7,25 @@ stylesheet: ./cv-style.css
 <div style="text-align: right; margin: 0;">
 <table style="border:none; margin-bottom: 16px;">
   <tr>
-    <td style="border:none; vertical-align:top; ">
+    <td style="border:none; vertical-align:top; interline-height: 1;">
       <p style="margin:0; color:#1a1a1a; font-size:13pt;">Iván Cárdenas-León</p>
       <p style="margin:4px 0; color:#C0392B; font-size:11pt;">
         Geospatial Specialist · PhD Candidate
       </p>
-      <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:var(--navy);">linkedin.com/in/ivancardenasleon</a><br>
-      <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:var(--navy);"> github.com/ivan-cardenas/</a><br>
-      <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:var(--navy);">ilcardenas26@gmail.com</a><br>
+    <p style="margin:2px 0; text-align:right;">
+      <a href=https://ivan-cardenas.github.io/ style="text-decoration:none; color:var(--navy);">Website</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+      <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:var(--navy);">LinkedIn</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+      <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:var(--navy);">Github</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+      <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:var(--navy);">ilcardenas26@gmail.com</a> <span style="color:#ccc; margin: 0 6px;">|</span>
       <a href="tel:+310686185983" style="text-decoration:none; color:var(--navy);">+31 0686185983</a>
+    </p>
     </td>
   </tr>
 </table>
 </div>
 
 ---
-27th May 2026
+28th May 2026
 <br>
 Library, ICT Services & Archive 
 <br>

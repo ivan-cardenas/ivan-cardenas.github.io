@@ -14,14 +14,14 @@ stylesheet: cv-style.css
       <p style="margin:4px 0; color:#C0392B; font-size:11pt;">
         Geospatial Specialist · PhD Candidate
       </p>
-      <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:#C0392B;">linkedin.com/in/ivancardenasleon</a><br>
-      <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:#C0392B;">ilcardenas26@gmail.com</a><br>
-      <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:#C0392B;"> github.com/ivan-cardenas/</a><br>
-      <a href="tel:+310686185983" style="text-decoration:none; color:#C0392B;">+31 0686185983</a>
+      <p style="margin:2px 0;">
+        <a href=https://ivan-cardenas.github.io/ style="text-decoration:none; color:var(--navy);">Website</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+        <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:var(--navy);">LinkedIn</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+        <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:var(--navy);">Github</a>  <span style="color:#ccc; margin: 0 6px;">|</span>
+        <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:var(--navy);">ilcardenas26@gmail.com</a> <span style="color:#ccc; margin: 0 6px;">|</span>
+        <a href="tel:+310686185983" style="text-decoration:none; color:var(--navy);">+31 0686185983</a>
+    </p>
     </td>
-    <td style="border:none; width:110px; vertical-align:top; text-align:right;">
-      
-
   </tr>
 </table>
 
