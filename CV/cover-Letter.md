@@ -25,20 +25,19 @@ stylesheet: ./cv-style.css
 </div>
 
 ---
-28th May 2026
+12th August 2026
 <br>
-Library, ICT Services & Archive 
-<br>
+UNOPS Indonesia<br>
 Enschede, Netherlands
 <br><br>
 
 
 **Job Application for Research Data Steward**
 
-Dear Efe and LISA Team,
+Dear recruiting team
 
 <br>
-My name is Iván Cárdenas-León, I am currently in the last year of my PhD in Urban Digital Twins at the ITC faculty. Through this letter, I would like to apply for the position of Research Data Steward at LISA. I consider that my coding abilities coupled with my solution driven mindset and eight years of experience as an Environmental Engineer and researcher makes me a great candidate for this role.
+My name is Iván Cárdenas-León, I am currently in the last year of my PhD in Urban Digital Twins at the ITC faculty. Through this letter, I would like to apply for the position of Satellite Imagery Analysis Specialist. I consider that my coding abilities coupled with my solution driven mindset and eight years of experience as an Environmental Engineer and researcher makes me a great candidate for this role.
 
 <br>
 
@@ -46,22 +45,24 @@ In my current research I am developing **CrossTwin**, an open-source Urban Digit
 
 <br>
 
-Beyond research, I have delivered applied geospatial solutions in consulting roles across Colombia and the Netherlands, including UAV imagery pipelines, Geo-database management with ETL pipelines and metadata management on environmental impact assessment projects, mining, energy transmission, flood risk modeling, Oil & Gas exploitation, and urban planning, and Web-GIS development using Mapbox GL and JavaScript. At Philips, I replaced a manual biodiversity spredsheets workflow with an interactive global manufacturing site map integrating satellite and API-based land-use data. On both academic and consulting projects I have handled different data types and storage systems, including satellite imagery, databases, text files, spredsheets and images with their corresponding metadata traceability and version control.
+Beyond research, I have delivered applied geospatial solutions in consulting roles across Colombia and the Netherlands, including Satellite imagery processing and analysis; UAV imagery pipelines; Geo-database management with ETL pipelines and metadata management on environmental impact assessment projects, mining, energy transmission, flood risk modeling, Oil & Gas exploitation, and urban planning; and Web-GIS development using Mapbox GL and JavaScript. At Philips, I replaced a manual biodiversity spredsheets workflow with an interactive global manufacturing site map integrating satellite and API-based land-use data. On both academic and consulting projects I have handled different data types and storage systems, including satellite imagery, databases, text files, spredsheets and images with their corresponding metadata traceability and version control.
 
 <br>
 
-During the past three years, I have been designing and delivering university lectures on Digital Twins and Urban Heat Modelling for ITC and Vrije Universiteit Amsterdam, in these experiences I have had the opportunity to showcase my skills that reflect both my deep technical knowledge and my ability to communicate complex methods to diverse audiences.
+<!-- During the past three years, I have been designing and delivering university lectures on Digital Twins and Urban Heat Modelling for ITC and Vrije Universiteit Amsterdam, in these experiences I have had the opportunity to showcase my skills that reflect both my deep technical knowledge and my ability to communicate complex methods to diverse audiences. -->
+
+My work experience in multi culutural and multi disciplinary environments has allowed me to learn how to manage and communicate complex projects and solutions to different audiences. Likewise I understand the importance of having standarized tools for data management and imagery analysis so information can be easily shared, accessed and used. My knowledge and skills in this areas, and my expertise in geospatial analysis and anlytical processes can be a great asset to DISHA's workflows for rapid damage assessment following typhoons, floods, earthquakes and other natural disasters that are also common in Colombia, except the typoohs of course. I belive that my skills can support the development of reusable and scalable solutions for the South East Asia regional office.
+
+<!-- <br> -->
+
+<!-- I enjoy being able to apply my knowledge to ease the work of new researchers and to share my experience with them. I see the position
+of Research Data Steward as a great chance to explore opportunities within the research environment that do not necessarily translate into a research paper in itself, but are crucial for successful project management. -->
 
 <br>
 
-I enjoy being able to apply my knowledge to ease the work of new researchers and to share my experience with them. I see the position
-of Research Data Steward as a great chance to explore opportunities within the research environment that do not necessarily translate into a research paper in itself, but are crucial for successful project management.
+On the personal side, I have been living with my partner in Enschede, Netherlands for the past five years, and in my free time I play tycoon and strategy videogames, play beach volleyball, go hiking, find creative inspiration from illustrators, as of late, I am also been enjoying taking photographs of nature, animals and architecture. 
 
 <br>
-
-On the personal side, I have been living with my partner in Enschede for the past five years, and in my free time I play tycoon and strategy videogames, play beach volleyball, go hiking, find creative inspiration from illustrators, as of late, I am also been enjoying taking photographs of nature, animals and architecture. 
-
-I believe that my experience, skills and knowledge will be valuable for the researchers in the ET faculty and can contribute to the success of the LISA team. 
 
 Hoping to hear from you soon!
 
