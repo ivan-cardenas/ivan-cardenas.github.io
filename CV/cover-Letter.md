@@ -14,53 +14,54 @@ stylesheet: ./cv-style.css
       </p>
       <a href="https://linkedin.com/in/ivancardenasleon" style="text-decoration:none; color:var(--navy);">linkedin.com/in/ivancardenasleon</a><br>
       <a href="https://github.com/ivan-cardenas/" style="text-decoration:none; color:var(--navy);"> github.com/ivan-cardenas/</a><br>
-      <a href="mailto:ilcardenas26@gmail.com" style="text-decoration:none; color:var(--navy);">ilcardenas26@gmail.com</a><br>
-      <a href="tel:+310686185983" style="text-decoration:none; color:var(--navy);">+31 0686185983</a>
+      <a href="mailto:ivanl.cardenasleon@gmail.com" style="text-decoration:none; color:var(--navy);">ivanl.cardenasleon@gmail.com</a><br>
+      <a href="tel:+31686185983" style="text-decoration:none; color:var(--navy);">+31 686185983</a>
     </td>
   </tr>
 </table>
 </div>
 
 ---
-27th May 2026
+19th of October, 2026
+<br><br>
+**Ivar Kolvoort   
+**<br>
+Head of AI Living Lab
 <br>
-Library, ICT Services & Archive 
-<br>
-Enschede, Netherlands
+**Universiteit van Amsterdam
+**<br>
+Amsterdam, Netherlands
 <br><br>
 
 
-**Job Application for Research Data Steward**
-
-Dear Efe and LISA Team,
-
-<br>
-My name is Iván Cárdenas-León, I am currently in the last year of my PhD in Urban Digital Twins at the ITC faculty. Through this letter, I would like to apply for the position of Research Data Steward at LISA. I consider that my coding abilities coupled with my solution driven mindset and eight years of experience as an Environmental Engineer and researcher makes me a great candidate for this role.
+**Job Application for AI Expert**
+<br><br>
+Dear Ivar Kolvoort,
 
 <br>
+I am a final-year PhD candidate in Urban Digital Twins at the ITC Faculty of the University of Twente, and I would like to apply for the position of AI Expert at the AI Living Lab. With eight years of experience as an Environmental Engineer and researcher, I combine strong coding skills with a habit of testing new AI tools on real research problems, and I enjoy helping others do the same.
+<br><br>
 
-In my current research I am developing **CrossTwin**, an open-source Urban Digital Twin platform across three urban sectors: drinking water supply, heat stress, and housing provision, which I expect turns into a software product and publication. Alongside this, I have built and deployed real operational tools: a Bibliographic reference enricher through CrossRef, Openalex and Semantic Scholar; a Streamlit web application for Circular Energy scenario analysis; a Python Panel monitoring dashboard for Vitens, the Dutch drinking water authority; and a ArcGIS Experience and geoprocessing tool for heat stress which allows for scenario-based modelling, impact assessment, and environmental cost analysis. For all of my research I have constantly used Git and GitHub for version control and collaboration. In my work I regularly use AI tools including Claude code and other LLM-assisted coding to accelerate prototyping and demo development. One of my publications includes a peer-reviewed Data paper as a result of a systematic literature review on the indicators used to monitor and evaluate impacts of planning decisions.
-
-<br>
-
-Beyond research, I have delivered applied geospatial solutions in consulting roles across Colombia and the Netherlands, including UAV imagery pipelines, Geo-database management with ETL pipelines and metadata management on environmental impact assessment projects, mining, energy transmission, flood risk modeling, Oil & Gas exploitation, and urban planning, and Web-GIS development using Mapbox GL and JavaScript. At Philips, I replaced a manual biodiversity spredsheets workflow with an interactive global manufacturing site map integrating satellite and API-based land-use data. On both academic and consulting projects I have handled different data types and storage systems, including satellite imagery, databases, text files, spredsheets and images with their corresponding metadata traceability and version control.
+In my current research I am developing an open-source Urban Digital Twin platform across three urban sectors: drinking water supply, heat stress, and housing provision. Alongside this, I have built operational tools: a bibliographic reference enricher through CrossRef, OpenAlex and Semantic Scholar; a Streamlit web application for Circular Energy scenario analysis; and a Python Panel monitoring dashboard for Vitens, the Dutch drinking water authority. I build these with LLM assistants and agentic tools such as Claude Code, Codex and Windsurf, which have drastically reduced the time I spend writing code and given me more time to think about the questions and problems my research is answering. Likewise, I keep myself up-to-date with faster literature search using tools like Asta and I am currently learning the specifics of Elsevier's Leapspace.
 
 <br>
 
-During the past three years, I have been designing and delivering university lectures on Digital Twins and Urban Heat Modelling for ITC and Vrije Universiteit Amsterdam, in these experiences I have had the opportunity to showcase my skills that reflect both my deep technical knowledge and my ability to communicate complex methods to diverse audiences.
+To make this repeatable, I have built my own skills and plugins for prototyping, including UX design, software architecture, knowledge-graph building with Graphify, RAG, speech-to-text and deep research assistants. I validate AI-generated code and outputs with test cases and manual review, and I document where AI was used so that the work stays reproducible. This setup not only saves me time, but has also been a great learning experience, and I am excited to keep learning and to share my knowledge with other researchers.
 
+<!-- Before my PhD, I applied the same mindset in consulting. For instance, at Philips, I replaced a manual biodiversity spreadsheet workflow with an interactive global site map that integrates satellite and API-based land-use data .  -->
 <br>
 
-I enjoy being able to apply my knowledge to ease the work of new researchers and to share my experience with them. I see the position
-of Research Data Steward as a great chance to explore opportunities within the research environment that do not necessarily translate into a research paper in itself, but are crucial for successful project management.
+For three years I have lectured on Digital Twins and Urban Heat Modelling at ITC and Vrije Universiteit Amsterdam, which taught me to explain complex methods to students and researchers from different backgrounds. I want to bring that to the AI Living Lab by running hands-on workshops, mentoring students and supporting researchers with prototyping and the ethical use of AI tools in their work. I am particularly drawn to the Lab because how it work across different faculties across UvA and is a great opportunity to learn and support top researchers in their own field while exploring how other disciplines can adapt to and benefit from the power of AI tools in making better questions, improving methodologies and accelerating research.  I also see generative tools such as NanoBanana, GPT Image, Claude Design, Google Vids, Higgsfield and Video tools trough ComfyUI as useful for improving science communication and teaching, an area I would like to explore with researchers.
 
-<br>
+<br> 
 
-On the personal side, I have been living with my partner in Enschede for the past five years, and in my free time I play tycoon and strategy videogames, play beach volleyball, go hiking, find creative inspiration from illustrators, as of late, I am also been enjoying taking photographs of nature, animals and architecture. 
+<!-- Given these time savings, and with the rapid evolution of LLMs, agentic AI and generative AI, I have aimed to keep myself up-to-date with the latest developments and to introduce them into my own work. In this sense, I have created my own skills and integrated plugins to speed up prototyping, including UX design, software architecture, knowledge-graph tools like Graphify, RAG, speech-to-text models, deep research assistants, and text generators with my own style. This setup not only saves me time, but has also been a great learning experience, and I am excited to keep learning and to share my knowledge with other researchers. -->
 
-I believe that my experience, skills and knowledge will be valuable for the researchers in the ET faculty and can contribute to the success of the LISA team. 
 
-Hoping to hear from you soon!
+
+<!-- On the personal side, I have been living with my partner in Enschede for the past five years, and in my free time I play tycoon and strategy videogames, play beach volleyball, go hiking, find creative inspiration from illustrators, as of late, I am also been enjoying taking photographs of nature, animals and architecture.  -->
+
+I would welcome the opportunity to discuss how my skills and experience can contribute to the success of the AI Living Lab.
 
 <br>
 
@@ -75,6 +76,7 @@ Sincerely,
 
 **Iván Cárdenas-León**
 
-PhD Candidate in Urban Planning, University of Twente
+PhD Candidate in Digital Twins for Urban Planning
 
-**ilcardenas26@gmail.com | linkedin.com/in/ivancardenasleon**
+
+**ivanl.cardenasleon@gmail.com | linkedin.com/in/ivancardenasleon**
