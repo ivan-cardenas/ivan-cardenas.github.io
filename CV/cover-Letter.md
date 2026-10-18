@@ -7,7 +7,7 @@ stylesheet: ./cv-style.css
 <div style="text-align: right; margin: 0;">
 <table style="border:none; margin-bottom: 16px;">
   <tr>
-    <td style="border:none; vertical-align:top; ">
+    <td style="border:none; vertical-align:top; interline-height: 1;">
       <p style="margin:0; color:#1a1a1a; font-size:13pt;">Iván Cárdenas-León</p>
       <p style="margin:4px 0; color:#C0392B; font-size:11pt;">
         Geospatial Specialist · PhD Candidate
