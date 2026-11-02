@@ -49,7 +49,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -65,14 +65,13 @@
     <nav class="nav" id="navbar">
         <a href="#" class="nav__logo">Iván C<span>.</span></a>
         <ul class="nav__links" id="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio" class="nav__strong">Portfolio</a></li>
+            <li><a href="Blog.html" class="nav__strong">Blog</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="Blog.html">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="https://overlaymaps.com" target="_blank" rel="noopener" class="nav__store">Store <i class="fas fa-arrow-up-right-from-square" style="font-size:.7em"></i></a></li>
         </ul>
         <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -81,44 +80,175 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
-        <canvas id="hero-canvas"></canvas>
         <div class="hero__content">
-            <div class="hero__tag reveal">
-                <span class="dot"></span>
-                Open to opportunities
+            <div class="hero__text">
+                <p class="hero__hello reveal">Hi, I'm</p>
+                <h1 class="hero__name reveal reveal-delay-1">Iván Cárdenas-León</h1>
+                <p class="hero__lede reveal reveal-delay-2">I'm a cartographer and PhD candidate at the University of Twente. I make maps, dashboards and digital twins that help people understand places, from flood risk to urban heat to waste collection.</p>
+                <div class="hero__actions reveal reveal-delay-3">
+                    <a href="#portfolio" class="btn btn--primary">See my projects</a>
+                    <a href="Blog.html" class="btn btn--outline">Read the blog</a>
+                    <a href="https://overlaymaps.com" target="_blank" rel="noopener" class="btn btn--store"><i class="fas fa-store"></i> Visit the store</a>
+                </div>
             </div>
-            <h1 class="hero__name reveal reveal-delay-1">
-                Iván<br>Cárdenas-León<span class="cursor"></span>
-            </h1>
-            <p class="hero__title reveal reveal-delay-2">Geospatial Specialist &amp; PhD Candidate</p>
-            <p class="hero__subtitle reveal reveal-delay-3">Digital Twins &middot; Urban Planning &middot; Environmental Impact Assessment</p>
+            <figure class="hero__photo reveal reveal-delay-2">
+                <img src="Assets/Images/Profile_Pic.jpg" alt="Portrait of Iván Cárdenas-León">
+                <figcaption>Enschede &amp; Amsterdam, Netherlands</figcaption>
+            </figure>
+        </div>
+    </section>
 
-            <div class="hero__actions reveal reveal-delay-4">
-                <a href="mailto:ilcardenas26@gmail.com" class="btn btn--primary">
-                    <i class="fas fa-paper-plane"></i> Get in touch
-                </a>
-                <a href="#portfolio" class="btn btn--outline">View work</a>
-            </div>
+    <!-- ===== START HERE ===== -->
+    <section class="start" aria-label="Where to start">
+        <div class="start__grid">
+            <a href="#portfolio" class="start-card reveal">
+                <span class="start-card__kicker">Things I've built</span>
+                <h3>Portfolio</h3>
+                <p>Interactive dashboards, digital twins and a collection of maps I'm proud of.</p>
+                <span class="start-card__go">Browse projects <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="Blog.html" class="start-card reveal reveal-delay-1">
+                <span class="start-card__kicker">Things I've learned</span>
+                <h3>Blog</h3>
+                <p>Honest writing about academia, GIS and finding your way into a PhD.</p>
+                <span class="start-card__go">Read the posts <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://overlaymaps.com" target="_blank" rel="noopener" class="start-card start-card--store reveal reveal-delay-2">
+                <span class="start-card__kicker">Things you can buy</span>
+                <h3>Overlay Maps store</h3>
+                <p>My shop at overlaymaps.com, where the mapmaking turns into products.</p>
+                <span class="start-card__go">Go to overlaymaps.com <i class="fas fa-arrow-up-right-from-square"></i></span>
+            </a>
+        </div>
+    </section>
 
-            <div class="hero__stats reveal reveal-delay-5">
-                <div class="hero__stat">
-                    <h3 class="counter" data-target="8">0</h3>
-                    <p>Years Exp.</p>
-                </div>
-                <div class="hero__stat">
-                    <h3 class="counter" data-target="10">0</h3>
-                    <p>Clients</p>
-                </div>
-                <div class="hero__stat">
-                    <h3 class="counter" data-target="500">0</h3>
-                    <p>Maps Created</p>
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section section--alt" id="portfolio">
+        <div class="section__header reveal">
+            <p class="section__label">Portfolio</p>
+            <h2 class="section__title">Projects you can click through</h2>
+            <p class="section__desc">Dashboards, digital twins and maps. Most of these are live, so go ahead and poke around.</p>
+        </div>
+
+        <div class="portfolio__grid">
+            <div class="project-card project-card--featured reveal">
+                <img src="Assets/Images/Portafolio/pages/page-22.jpg" alt="Cartographic Portfolio" class="project-card__img">
+                <div class="project-card__body">
+                    <span class="project-card__tag">Start here</span>
+                    <h4>Cartographic Portfolio</h4>
+                    <p>22 selected maps, 3D visualizations, flood models, and environmental assessments spanning professional, academic, and personal projects (2016–2022).</p>
+                    <a href="Pages/Cartographic-Portfolio.html" class="project-card__link">
+                        See the maps <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+            <div class="project-card reveal">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>Dashboard Tutorial</h4>
+                    <p>A lecture on creating spatial interactive dashboards with Streamlit for geospatial data visualization.</p>
+                    <a href="https://ivan-cardenas.github.io/Dashboard-Tutorial/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>Research Papers Data</h4>
+                    <p>Comprehensive data visualization and analysis of research publications and academic contributions.</p>
+                    <a href="https://ivan-cardenas.github.io/PapersData/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fit=crop" alt="Papers Data" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>BibTex Enricher</h4>
+                    <p>Upload a .bib file. Metadata is fetched in batch from CrossRef, OpenAlex, Semantic Scholar, Europe PMC, Unpaywall, DataCite, and CORE (fallback for ResearchGate / Google Scholar indexed papers).</p>
+                    <a href="https://ivan-cardenas.github.io/bib-enricher/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=600&fit=crop" alt="IS2H4C Digital Twin" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>IS2H4C Digital Twin</h4>
+                    <p>Interactive dashboard modelling hydrogen production, energy flows, and industrial symbiosis networks for the EU Horizon Europe IS2H4C circular economy initiative.</p>
+                    <a href="https://is2h4c-dt.streamlit.app/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&h=600&fit=crop" alt="VALUED Framework" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>VALUED Framework</h4>
+                    <p>Interactive tool for exploring urban vulnerability hierarchies in deprived settlements via radial dendrogram visualisations with dynamic filtering and data export.</p>
+                    <a href="https://floodframework.streamlit.app/" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop" alt="PET Digital Twin Enschede" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>PET Digital Twin — Enschede</h4>
+                    <p>ArcGIS Web App modelling Physiological Equivalent Temperature for the Municipality of Enschede, analysing thermal comfort in relation to urban design, land cover, and climate variations.</p>
+                    <a href="https://utwente.maps.arcgis.com/apps/webappviewer/index.html?id=ca1f19d5ecfb4820a5d1c0ae31d61563" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-3">
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop" alt="Hatfield Digital Twin Solid Waste Management" class="project-card__img">
+                <div class="project-card__body">
+                    <h4>Hatfield Digital Twin — Solid Waste Management</h4>
+                    <p>ArcGIS Operations Dashboard optimising solid waste collection routes, container saturation monitoring, illegal dumping reports, and fuel-cost analytics for Hatfield, Pretoria.</p>
+                    <a href="https://utwente.maps.arcgis.com/apps/dashboards/58b298514229474e8607e02c4bdf944f" target="_blank" class="project-card__link">
+                        View project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+                    </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section class="section" id="blog">
+        <div class="section__header reveal">
+            <p class="section__label">From the blog</p>
+            <h2 class="section__title">Some things I've written</h2>
+            <p class="section__desc">Not tips or how-tos. Just my experience, the luck and the drama.</p>
+        </div>
+        <div class="blogteaser__grid">
+            <a href="Blog/Academia/How_did_I_land_a_PhD.html" class="blogteaser-card reveal">
+                <p class="meta">Academia &middot; 8 min read</p>
+                <h3>How did I land a PhD?</h3>
+                <p>Doing a PhD was never in my path, until the day I got an offer.</p>
+            </a>
+            <a href="Blog/Academia/Should_Academic_Publishing_Be_Flipped.html" class="blogteaser-card reveal reveal-delay-1">
+                <p class="meta">Academia &middot; 12 min read</p>
+                <h3>Should academic publishing be flipped upside down?</h3>
+                <p>Publishing, egos, hierarchies and silence, and a proposal to flip it.</p>
+            </a>
+        </div>
+        <div class="section__foot reveal"><a href="Blog.html" class="link-arrow">All blog posts <i class="fas fa-arrow-right"></i></a></div>
+    </section>
+
+    <!-- ===== STORE ===== -->
+    <section class="store" id="store">
+        <div class="store__inner reveal">
+            <p class="section__label">The store</p>
+            <h2>Find me at overlaymaps.com</h2>
+            <p>Overlay Maps is my online store. If you like the maps and projects here, that's where you can take a piece of them home.</p>
+            <a href="https://overlaymaps.com" target="_blank" rel="noopener" class="btn">Visit overlaymaps.com <i class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section class="section section--alt" id="about">
+    <section class="section" id="about">
         <div class="section__header reveal">
             <p class="section__label">About</p>
             <h2 class="section__title">Geospatial Specialist &amp; Researcher</h2>
@@ -197,7 +327,7 @@
     </section>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section class="section" id="experience">
+    <section class="section section--alt" id="experience">
         <div class="section__header reveal">
             <p class="section__label">Experience</p>
             <h2 class="section__title">Professional Journey</h2>
@@ -250,7 +380,7 @@
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section class="section section--alt" id="skills">
+    <section class="section" id="skills">
         <div class="section__header reveal">
             <p class="section__label">Skills</p>
             <h2 class="section__title">Technical Expertise</h2>
@@ -330,98 +460,6 @@
         </div>
     </section>
 
-    <!-- ===== PORTFOLIO ===== -->
-    <section class="section" id="portfolio">
-        <div class="section__header reveal">
-            <p class="section__label">Portfolio</p>
-            <h2 class="section__title">Featured Projects</h2>
-            <p class="section__desc">Interactive dashboards and data visualization projects</p>
-        </div>
-
-        <div class="portfolio__grid">
-            <div class="project-card reveal">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Dashboard Tutorial" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>Dashboard Tutorial</h4>
-                    <p>A lecture on creating spatial interactive dashboards with Streamlit for geospatial data visualization.</p>
-                    <a href="https://ivan-cardenas.github.io/Dashboard-Tutorial/" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-1">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Papers Data" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>Research Papers Data</h4>
-                    <p>Comprehensive data visualization and analysis of research publications and academic contributions.</p>
-                    <a href="https://ivan-cardenas.github.io/PapersData/" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-1">
-                <img src="https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fit=crop" alt="Papers Data" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>BibTex Enricher</h4>
-                    <p>Upload a .bib file. Metadata is fetched in batch from CrossRef, OpenAlex, Semantic Scholar, Europe PMC, Unpaywall, DataCite, and CORE (fallback for ResearchGate / Google Scholar indexed papers).</p>
-                    <a href="https://ivan-cardenas.github.io/bib-enricher/" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-2">
-                <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=600&fit=crop" alt="IS2H4C Digital Twin" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>IS2H4C Digital Twin</h4>
-                    <p>Interactive dashboard modelling hydrogen production, energy flows, and industrial symbiosis networks for the EU Horizon Europe IS2H4C circular economy initiative.</p>
-                    <a href="https://is2h4c-dt.streamlit.app/" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-2">
-                <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&h=600&fit=crop" alt="VALUED Framework" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>VALUED Framework</h4>
-                    <p>Interactive tool for exploring urban vulnerability hierarchies in deprived settlements via radial dendrogram visualisations with dynamic filtering and data export.</p>
-                    <a href="https://floodframework.streamlit.app/" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-2">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop" alt="PET Digital Twin Enschede" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>PET Digital Twin — Enschede</h4>
-                    <p>ArcGIS Web App modelling Physiological Equivalent Temperature for the Municipality of Enschede, analysing thermal comfort in relation to urban design, land cover, and climate variations.</p>
-                    <a href="https://utwente.maps.arcgis.com/apps/webappviewer/index.html?id=ca1f19d5ecfb4820a5d1c0ae31d61563" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-3">
-                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&h=600&fit=crop" alt="Hatfield Digital Twin Solid Waste Management" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>Hatfield Digital Twin — Solid Waste Management</h4>
-                    <p>ArcGIS Operations Dashboard optimising solid waste collection routes, container saturation monitoring, illegal dumping reports, and fuel-cost analytics for Hatfield, Pretoria.</p>
-                    <a href="https://utwente.maps.arcgis.com/apps/dashboards/58b298514229474e8607e02c4bdf944f" target="_blank" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project-card reveal reveal-delay-4">
-                <img src="Assets/Images/Portafolio/pages/page-22.jpg" alt="Cartographic Portfolio" class="project-card__img">
-                <div class="project-card__body">
-                    <h4>Cartographic Portfolio</h4>
-                    <p>22 selected maps, 3D visualizations, flood models, and environmental assessments spanning professional, academic, and personal projects (2016–2022).</p>
-                    <a href="Pages/Cartographic-Portfolio.html" class="project-card__link">
-                        View project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== ACHIEVEMENTS ===== -->
     <section class="section section--alt" id="achievements">
         <div class="section__header reveal">
@@ -481,6 +519,13 @@
                 </div>
             </div>
             <div class="contact-item reveal reveal-delay-2">
+                <i class="fas fa-store"></i>
+                <div>
+                    <h5>Store</h5>
+                    <p><a href="https://overlaymaps.com" target="_blank" rel="noopener">overlaymaps.com</a></p>
+                </div>
+            </div>
+            <div class="contact-item reveal reveal-delay-3">
                 <i class="fab fa-linkedin"></i>
                 <div>
                     <h5>LinkedIn</h5>
@@ -493,173 +538,18 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <p>&copy; <script>document.write(new Date().getFullYear())</script> Iván Cárdenas-León</p>
+        <div class="footer__links">
+            <a href="#portfolio">Portfolio</a>
+            <a href="Blog.html">Blog</a>
+            <a href="https://overlaymaps.com" target="_blank" rel="noopener">Store</a>
+        </div>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/ivancardenasleon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:ilcardenas26@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
     <script>
-    // ===== THREE.JS HERO SCENE =====
-    (function() {
-        const canvas = document.getElementById('hero-canvas');
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
-        camera.position.z = 3.5;
-
-        // Mouse tracking
-        const mouse = { x: 0, y: 0, target: { x: 0, y: 0 } };
-
-        // --- WIREFRAME GLOBE ---
-        const globeGeo = new THREE.IcosahedronGeometry(1.2, 3);
-        const globeMat = new THREE.MeshBasicMaterial({
-            color: 0x00d4aa,
-            wireframe: true,
-            transparent: true,
-            opacity: 0.12
-        });
-        const globe = new THREE.Mesh(globeGeo, globeMat);
-        scene.add(globe);
-
-        // --- GLOBE DOTS (vertices as points) ---
-        const dotGeo = new THREE.BufferGeometry();
-        const vertices = globeGeo.attributes.position.array;
-        dotGeo.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-
-        const dotMat = new THREE.PointsMaterial({
-            color: 0x00d4aa,
-            size: 0.025,
-            transparent: true,
-            opacity: 0.6,
-            sizeAttenuation: true
-        });
-        const dots = new THREE.Points(dotGeo, dotMat);
-        scene.add(dots);
-
-        // --- FLOATING PARTICLES ---
-        const particleCount = 200;
-        const positions = new Float32Array(particleCount * 3);
-        const velocities = [];
-
-        for (let i = 0; i < particleCount; i++) {
-            const r = 1.8 + Math.random() * 3;
-            const theta = Math.random() * Math.PI * 2;
-            const phi = Math.acos(2 * Math.random() - 1);
-
-            positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
-            positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-            positions[i * 3 + 2] = r * Math.cos(phi);
-
-            velocities.push({
-                x: (Math.random() - 0.5) * 0.002,
-                y: (Math.random() - 0.5) * 0.002,
-                z: (Math.random() - 0.5) * 0.002
-            });
-        }
-
-        const particleGeo = new THREE.BufferGeometry();
-        particleGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-
-        const particleMat = new THREE.PointsMaterial({
-            color: 0x00d4aa,
-            size: 0.015,
-            transparent: true,
-            opacity: 0.4,
-            sizeAttenuation: true
-        });
-        const particles = new THREE.Points(particleGeo, particleMat);
-        scene.add(particles);
-
-        // --- ORBITAL RINGS ---
-        for (let i = 0; i < 3; i++) {
-            const ringGeo = new THREE.RingGeometry(1.5 + i * 0.4, 1.51 + i * 0.4, 80);
-            const ringMat = new THREE.MeshBasicMaterial({
-                color: 0x00d4aa,
-                transparent: true,
-                opacity: 0.06,
-                side: THREE.DoubleSide
-            });
-            const ring = new THREE.Mesh(ringGeo, ringMat);
-            ring.rotation.x = Math.PI * 0.35 + i * 0.3;
-            ring.rotation.y = i * 0.5;
-            scene.add(ring);
-        }
-
-        // --- RESIZE ---
-        function resize() {
-            const hero = document.querySelector('.hero');
-            const w = hero.offsetWidth;
-            const h = hero.offsetHeight;
-            renderer.setSize(w, h);
-            camera.aspect = w / h;
-            camera.updateProjectionMatrix();
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        // --- MOUSE ---
-        window.addEventListener('mousemove', (e) => {
-            mouse.target.x = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.target.y = -(e.clientY / window.innerHeight) * 2 + 1;
-        });
-
-        // --- ANIMATE ---
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Smooth mouse follow
-            mouse.x += (mouse.target.x - mouse.x) * 0.05;
-            mouse.y += (mouse.target.y - mouse.y) * 0.05;
-
-            // Globe rotation
-            globe.rotation.y += 0.002;
-            globe.rotation.x += 0.0005;
-            dots.rotation.y = globe.rotation.y;
-            dots.rotation.x = globe.rotation.x;
-
-            // Mouse influence on globe tilt
-            globe.rotation.x += mouse.y * 0.003;
-            globe.rotation.z = mouse.x * 0.1;
-            dots.rotation.x = globe.rotation.x;
-            dots.rotation.z = globe.rotation.z;
-
-            // Particle drift
-            const posArr = particleGeo.attributes.position.array;
-            for (let i = 0; i < particleCount; i++) {
-                posArr[i * 3]     += velocities[i].x;
-                posArr[i * 3 + 1] += velocities[i].y;
-                posArr[i * 3 + 2] += velocities[i].z;
-
-                // Boundary wrap
-                const dist = Math.sqrt(
-                    posArr[i * 3] ** 2 +
-                    posArr[i * 3 + 1] ** 2 +
-                    posArr[i * 3 + 2] ** 2
-                );
-                if (dist > 5) {
-                    posArr[i * 3]     *= 0.4;
-                    posArr[i * 3 + 1] *= 0.4;
-                    posArr[i * 3 + 2] *= 0.4;
-                }
-            }
-            particleGeo.attributes.position.needsUpdate = true;
-
-            // Camera subtle movement
-            camera.position.x = mouse.x * 0.3;
-            camera.position.y = mouse.y * 0.3;
-            camera.lookAt(0, 0, 0);
-
-            renderer.render(scene, camera);
-        }
-        animate();
-    })();
-
     // ===== SCROLL REVEAL =====
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -670,38 +560,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // ===== COUNTER ANIMATION =====
-    let countersAnimated = false;
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !countersAnimated) {
-                countersAnimated = true;
-                document.querySelectorAll('.counter').forEach(counter => {
-                    const target = parseInt(counter.dataset.target);
-                    const duration = 2000;
-                    const step = target / (duration / 16);
-                    let current = 0;
-
-                    function update() {
-                        current += step;
-                        if (current < target) {
-                            counter.textContent = Math.floor(current);
-                            requestAnimationFrame(update);
-                        } else {
-                            if (target === 6)   counter.textContent = '6+';
-                            else if (target === 10)  counter.textContent = '10+';
-                            else if (target === 500) counter.textContent = '500+';
-                            else counter.textContent = target;
-                        }
-                    }
-                    update();
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.hero__stats').forEach(el => statsObserver.observe(el));
 
     // ===== LANGUAGE BAR ANIMATION =====
     const barObserver = new IntersectionObserver((entries) => {
