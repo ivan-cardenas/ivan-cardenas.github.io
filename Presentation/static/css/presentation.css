@@ -1,0 +1,111 @@
+/* The landing page inside a centred 16:9 frame. --u is one pixel of a 1920x1080 slide. */
+:root {
+    color-scheme: dark;
+    --frame-w: min(100vw, calc(100vh * 16 / 9));
+    --frame-h: min(100vh, calc(100vw * 9 / 16));
+    --gutter-x: calc((100vw - var(--frame-w)) / 2);
+    --gutter-y: calc((100vh - var(--frame-h)) / 2);
+    --u: calc(var(--frame-w) / 1920);
+}
+
+html { background: var(--bg-0); scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+
+.video-stage {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg-0);
+}
+.video-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    background: var(--bg-1);
+}
+.video-frame.is-over { outline: 2px solid var(--cyan-light); outline-offset: -2px; }
+.video-frame video { width: 100%; height: 100%; object-fit: contain; background: #000; }
+.video-empty { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; padding: 1rem; }
+.video-empty p { margin: 0; }
+.video-title { font: 600 clamp(1.5rem, 3vw, 3.4rem)/1.14 var(--font-base); color: var(--text-primary); }
+.video-empty label { cursor: pointer; }
+.video-local { color: var(--text-primary); text-decoration: underline; text-underline-offset: 0.2em; }
+.video-input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.video-local:has(+ .video-input:focus-visible) { outline: 2px solid var(--cyan-light); outline-offset: 0.2em; }
+
+@media (min-width: 768px) {
+    .landing { --section-height: calc(var(--frame-h) * 1.9); }
+
+    #city-canvas, #city-fade, .city-sketch {
+        inset: var(--gutter-y) auto auto var(--gutter-x);
+        width: var(--frame-w);
+        height: var(--frame-h);
+    }
+
+    .landing-header {
+        inset: var(--gutter-y) var(--gutter-x) auto var(--gutter-x);
+        padding: calc(var(--u) * 28) calc(var(--u) * 48);
+    }
+    .wordmark { font-size: calc(var(--u) * 28); }
+
+    .hud {
+        left: calc(var(--gutter-x) + var(--u) * 48);
+        bottom: calc(var(--gutter-y) + var(--u) * 24);
+        font-size: calc(var(--u) * 18);
+    }
+
+    .rail { right: calc(var(--gutter-x) + var(--u) * 24); }
+    .rail a { min-height: calc(var(--u) * 42); font-size: calc(var(--u) * 18); }
+
+    main { width: var(--frame-w); margin-inline: auto; }
+
+    .stage { padding-inline: calc(var(--u) * 96); }
+    .stage[data-side="right"] { padding-right: calc(var(--u) * 270); }
+    .stage--closing { min-height: var(--frame-h); }
+
+    .panel {
+        top: calc(var(--gutter-y) + var(--frame-h) * 0.17);
+        max-width: calc(var(--u) * 760);
+        padding: calc(var(--u) * 40) calc(var(--u) * 44);
+        font-size: calc(var(--u) * 28);
+        line-height: 1.5;
+        border-left-width: calc(var(--u) * 3);
+    }
+    .panel p { margin-bottom: calc(var(--u) * 18); }
+    .panel h1 { font-size: calc(var(--u) * 112); margin-bottom: calc(var(--u) * 20); }
+    .panel h2 { font-size: calc(var(--u) * 58); margin-bottom: calc(var(--u) * 22); }
+    .lede { font-size: calc(var(--u) * 34); }
+    .eyebrow { font-size: calc(var(--u) * 20); }
+    .datum { font-size: calc(var(--u) * 22); }
+
+    .legend, .effects { font-size: calc(var(--u) * 22); }
+    .legend { column-gap: calc(var(--u) * 28); }
+    .swatch { width: calc(var(--u) * 26); height: calc(var(--u) * 18); }
+    .swatch--wire, .swatch--ochre { height: calc(var(--u) * 5); }
+    .swatch--gap { height: calc(var(--u) * 2); }
+    .effects li { padding-left: calc(var(--u) * 28); }
+    .effects li::before { width: calc(var(--u) * 12); height: calc(var(--u) * 12); }
+
+    .sim-slider { margin-top: calc(var(--u) * 28); }
+    .sim-track { height: calc(var(--u) * 4); }
+    .sim-thumb {
+        top: calc(var(--u) * -10);
+        left: calc(var(--value) * 100% - var(--u) * 12);
+        width: calc(var(--u) * 24);
+        height: calc(var(--u) * 24);
+    }
+    .sim-labels { margin-top: calc(var(--u) * 20); font-size: calc(var(--u) * 20); }
+
+    .video-frame { width: var(--frame-w); }
+    .video-empty { gap: calc(var(--u) * 28); }
+    .video-title { font-size: calc(var(--u) * 64); }
+    .video-empty .btn-primary { font-size: calc(var(--u) * 24); padding: calc(var(--u) * 16) calc(var(--u) * 32); }
+    .video-local { font-size: calc(var(--u) * 20); }
+}

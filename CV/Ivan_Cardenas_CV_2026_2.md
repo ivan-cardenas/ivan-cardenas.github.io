@@ -37,7 +37,7 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 ## Experience
 
 ### PhD Candidate
-**ITC — University of Twente**, Enschede, NL · *10/2023 - Present · 2 yrs 6 mo*
+**ITC — University of Twente**, Enschede, NL · *10/2023 - Present · 3 yrs*
 
 *Urban Digital Twins · DPSIR framework · Directed Acyclic Graphs · Python · GeoDjango · PostGIS · React · TiTiler · ArcGIS · Claude Code*
 
@@ -46,6 +46,18 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 - **Published** four peer-reviewed papers in top-tier journals advancing Decision Support Systems for Urban Planning.
 - **Released** an open-source bibliometric enrichment tool for BibTeX metadata enabling seamless data integration across multiple academic databases.
 - **Supervised** MSc students on research methods and technical skills.
+
+---
+
+
+### Natural Capital Intern
+**Koninklijke Philips N.V**, Amsterdam, NL · *04/2023 - 08/2023 · 5 mo*
+
+*Web-GIS · Mapbox GL · HTML · CSS · JavaScript*
+
+- **Developed** an interactive Web-GIS map of global manufacturing sites, integrating land-use and biodiversity data from remote sensing and external APIs using Mapbox GL, HTML, CSS, and JavaScript.
+- **Synthesised** multi-source satellite imagery and corporate environmental datasets into a unified spatial layer, replacing a manual spreadsheet workflow.
+- **Created** novel mapping solutions and data visualisations to communicate sustainability impact across all manufacturing sites.
 
 ---
 
@@ -60,16 +72,6 @@ I am a Geospatial (GIS) Specialist with 8 years of experience in spatial data pi
 
 ---
 
-### Natural Capital Intern
-**Koninklijke Philips N.V**, Amsterdam, NL · *04/2023 - 08/2023 · 5 mo*
-
-*Web-GIS · Mapbox GL · HTML · CSS · JavaScript*
-
-- **Developed** an interactive Web-GIS map of global manufacturing sites, integrating land-use and biodiversity data from remote sensing and external APIs using Mapbox GL, HTML, CSS, and JavaScript.
-- **Synthesised** multi-source satellite imagery and corporate environmental datasets into a unified spatial layer, replacing a manual spreadsheet workflow.
-- **Created** novel mapping solutions and data visualisations to communicate sustainability impact across all manufacturing sites.
-
----
 
 ### Geographic Information System Analyst
 **Freelancer**, Bogotá, CO · *03/2016 - 08/2021 · 5 yrs 5 mo*
@@ -122,9 +124,10 @@ Universidad de La Salle · *01/2009 - 04/2015*
 ## Teaching
 
 ### Course Instructor
-**UNIGIS — Vrije Universiteit Amsterdam** · *2024 - 2025*
+**UNIGIS — Vrije Universiteit Amsterdam** · *2024 - 2026*
 
-- Digital Twin, MSc Geographical Information Sciences — 2024, 2025
+- Digital Twins, MSc Geographical Information Sciences — 2024, 2025
+
 
 ### Guest Lecturer
 **University of Twente** · *2024 - 2025*
@@ -147,6 +150,10 @@ ORCID: [0009-0005-0245-633X](https://orcid.org/0009-0005-0245-633X) · [Universi
 
 
 ## 2026
+
+**[Where to start with urban Digital Twins? Backward-chaining key indicators for cross-sector water, heat, and housing impact analysis](https://doi.org/10.1016/j.compenvurbsys.2026.102512)**
+Cárdenas-León, I., Nourian, P., Koeva, M. N. & Pfeffer, K. · Jan 2027
+*Computers in Environmental and Urban Science*, 131, 102512.
 
 **[BibTeX Enricher](https://doi.org/10.5281/ZENODO.18980531)** *(Software)*
 Cardenas-Leon, I. · 12 Mar 2026

@@ -1,0 +1,286 @@
+/* ==========================================================================
+   CrossTwin landing page (/welcome/). Tokens come from theme.css; the colours
+   below are the indicator palette (indicators.css) plus one light tint of the
+   Blueprint Cyanotype accent, since --accent itself is too dark for text.
+   ========================================================================== */
+
+.landing {
+    --cyan-light: #7fb6cb;
+    --zoning-brick: #B5674A;
+    --survey-ochre: #C99A3E;
+    --panel-bg: rgba(8, 8, 8, 0.88);
+    --section-height: 220svh;
+    overflow-x: clip;
+}
+
+.landing :focus-visible {
+    outline: 2px solid var(--cyan-light);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.landing h1:focus, .landing h2:focus { outline: none; }
+
+/* Scene layers: fixed behind the text; the canvas never takes pointer or touch input */
+#city-canvas, #city-fade, .city-sketch {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100lvh;
+    z-index: 0;
+    pointer-events: none;
+}
+#city-canvas[hidden] { display: none; }
+#city-fade { opacity: 0; transition: opacity 0.45s linear; }
+.city-sketch { object-fit: contain; object-position: 70% 50%; opacity: 0.8; }
+[data-scene="live"] .city-sketch { display: none; }
+
+.landing-loader {
+    position: fixed;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0;
+    font: 400 0.72rem var(--font-mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    animation: pulse-glow 1.6s ease-in-out infinite;
+}
+.landing-loader[hidden] { display: none; }
+
+.landing-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem clamp(1rem, 3vw, 2.25rem);
+    pointer-events: none;
+}
+.landing-header a { pointer-events: auto; }
+.wordmark {
+    font: 700 1.02rem var(--font-base);
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.header-link {
+    font: 500 0.75rem var(--font-mono);
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    background: var(--panel-bg);
+}
+.header-link:hover { border-color: var(--cyan-light); }
+
+.hud {
+    position: fixed;
+    left: clamp(1rem, 3vw, 2.25rem);
+    bottom: 1rem;
+    z-index: 2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font: 400 0.68rem var(--font-mono);
+    color: var(--text-tertiary);
+    pointer-events: none;
+    background: var(--panel-bg);
+    padding: 0.3rem 0.5rem;
+}
+.hud-note { color: var(--text-secondary); }
+.hud > span:first-child { display: none; }
+[data-scene="live"] .hud > span:first-child { display: inline; }
+
+/* Stage rail */
+.rail {
+    position: fixed;
+    right: clamp(0.5rem, 1.5vw, 1.25rem);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+.rail ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: flex-end; }
+.rail a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.55rem;
+    min-height: 26px;
+    min-width: 26px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font: 400 0.68rem var(--font-mono);
+}
+.rail a::after {
+    content: '';
+    width: 14px;
+    height: 2px;
+    background: var(--text-tertiary);
+    transition: width 0.2s ease, background 0.2s ease;
+}
+.rail a span {
+    opacity: 0;
+    background: var(--panel-bg);
+    padding: 0.1rem 0.35rem;
+    white-space: nowrap;
+    transition: opacity 0.15s ease;
+}
+.rail a:hover span, .rail a:focus-visible span, .rail a[aria-current] span { opacity: 1; }
+.rail a[aria-current] { color: var(--text-primary); }
+.rail a[aria-current]::after { width: 28px; background: var(--survey-ochre); }
+
+/* Stages: tall sections of native scroll; the panel sticks while the scene changes */
+main { position: relative; z-index: 1; }
+
+.stage {
+    position: relative;
+    min-height: var(--section-height);
+    display: flex;
+    align-items: flex-start;
+    padding-inline: clamp(1rem, 5vw, 5rem);
+}
+.stage[data-side="right"] { justify-content: flex-end; padding-right: clamp(8rem, 13vw, 12rem); }
+.stage--closing { min-height: 100svh; }
+
+.panel {
+    position: sticky;
+    top: 22svh;
+    max-width: 27rem;
+    padding: 1.4rem 1.5rem 1.5rem;
+    background: var(--panel-bg);
+    border-left: 2px solid var(--accent);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.panel.is-faded { visibility: hidden; }
+.panel p { margin: 0 0 0.7rem; }
+
+.eyebrow {
+    font: 500 0.7rem var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cyan-light);
+}
+.panel .eyebrow { margin-bottom: 0.6rem; }
+
+.panel h1, .panel h2 {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-base);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+}
+.panel h1 { font-size: clamp(2.6rem, 5vw, 3.9rem); font-weight: 700; }
+.panel h2 { font-size: clamp(1.5rem, 2.6vw, 2.05rem); }
+.lede { font: 500 1.12rem/1.4 var(--font-base); color: var(--text-primary); }
+
+.datum { font: 400 0.72rem var(--font-mono); color: var(--survey-ochre); }
+.panel .datum { margin: 0.2rem 0 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+
+.legend, .effects { list-style: none; margin: 0.4rem 0 0; padding: 0; font: 400 0.72rem/1.9 var(--font-mono); }
+.legend { display: flex; flex-wrap: wrap; column-gap: 1rem; color: var(--text-primary); }
+.legend li { display: inline-flex; align-items: center; gap: 0.45rem; }
+.swatch { width: 14px; height: 10px; flex: none; }
+.swatch--wire { height: 3px; background: var(--cyan-light); }
+.swatch--gap { height: 1px; background: #8a8a8a; }
+.swatch--ochre { height: 3px; background: var(--survey-ochre); }
+.swatch--residential { background: #4f8ba3; }
+.swatch--commercial { background: var(--survey-ochre); }
+.swatch--mixed { background: var(--zoning-brick); }
+.swatch--institutional { background: #e7e2d6; }
+
+.effects li { color: var(--text-tertiary); padding-left: 1rem; position: relative; }
+.effects li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--text-tertiary);
+}
+.effects li.is-on { color: var(--text-primary); }
+.effects li.is-on::before { background: var(--survey-ochre); border-color: var(--survey-ochre); }
+
+.sim-slider { --value: 0; margin-top: 0.9rem; }
+.sim-track { position: relative; height: 2px; background: var(--border-strong); }
+.sim-track::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(var(--value) * 100%);
+    background: var(--survey-ochre);
+}
+.sim-thumb {
+    position: absolute;
+    top: -6px;
+    left: calc(var(--value) * 100% - 7px);
+    width: 14px;
+    height: 14px;
+    background: var(--survey-ochre);
+}
+.sim-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+    font: 400 0.68rem var(--font-mono);
+    color: var(--text-secondary);
+}
+
+/* No WebGL: the sketch stays, and less scrolling is needed */
+[data-scene="none"] .stage { min-height: 110svh; }
+[data-scene="none"] .stage--closing { min-height: 100svh; }
+
+/* Static views crossfade: no reason for long sections */
+@media (prefers-reduced-motion: reduce) {
+    .landing { --section-height: 130svh; }
+    .landing-loader { animation: none; }
+    .rail a::after, .rail a span { transition: none; }
+}
+
+/* Mobile: the panel sits at the bottom on its own backing, the city above it */
+@media (max-width: 767px) {
+    .landing { --section-height: 240svh; }
+    .stage, .stage[data-side="right"] {
+        justify-content: stretch;
+        align-items: flex-end;
+        padding: 0 0.6rem 0.6rem;
+    }
+    .panel {
+        top: auto;
+        bottom: 0.6rem;
+        max-width: none;
+        width: 100%;
+        padding: 0.95rem 1rem 1rem;
+        font-size: 0.86rem;
+        line-height: 1.5;
+        background: rgba(8, 8, 8, 0.93);
+    }
+    .panel h1 { font-size: 2.3rem; }
+    .panel h2 { font-size: 1.28rem; margin-bottom: 0.5rem; }
+    .lede { font-size: 1rem; }
+    .actions .btn-primary, .actions .btn-secondary { width: auto; flex: 1 1 auto; }
+    .rail { top: 3.6rem; transform: none; right: 0.35rem; }
+    .rail a { min-height: 24px; }
+    .rail a span { display: none; }
+    .rail a::after { width: 10px; }
+    .rail a[aria-current]::after { width: 20px; }
+    .hud { top: 3.4rem; bottom: auto; left: 1rem; right: 3rem; }
+    [data-scene="live"] .hud > span:first-child { display: none; }
+    .city-sketch { object-position: 50% 15%; }
+    [data-scene="none"] .stage { min-height: 100svh; }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 767px) {
+    .landing { --section-height: 130svh; }
+}

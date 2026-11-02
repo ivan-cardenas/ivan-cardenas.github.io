@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>CrossTwin at PLAN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/theme.css">
+<link rel="stylesheet" href="static/css/landing.css">
+<link rel="stylesheet" href="static/css/presentation.css">
+<script>
+document.documentElement.dataset.scene = 'loading';
+document.body.classList.add('landing');
+</script>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.min.js"}}</script>
+
+<canvas id="city-canvas" hidden role="img"
+        aria-label="An illustrative 3D model of a Dutch district on a circular base. It starts as a blueprint and, as the page scrolls, turns slowly and takes on land cover, a causal graph, water pipes, heat colours, new homes, building types and a newly drawn building."></canvas>
+<canvas id="city-fade" aria-hidden="true"></canvas>
+
+<p id="landing-loader" class="landing-loader" role="status" hidden>Drawing the model</p>
+
+<header class="landing-header">
+    <span class="wordmark">CrossTwin</span>
+</header>
+
+<p class="hud">
+    <span aria-hidden="true"><span data-hud-figure>Fig. 0</span> · heading <span data-hud-heading>000°</span></span>
+    <span class="hud-note">Illustrative city: generated, not measured data.</span>
+</p>
+
+<nav class="rail" aria-label="Presentation stages">
+    <ol>
+        <li><a href="#overview" aria-current="step"><span>Overview</span></a></li>
+        <li><a href="#foundation"><span>Foundation</span></a></li>
+        <li><a href="#causal-network"><span>Causal network</span></a></li>
+        <li><a href="#water"><span>Water supply</span></a></li>
+        <li><a href="#heat"><span>Urban heat</span></a></li>
+        <li><a href="#housing"><span>Housing</span></a></li>
+        <li><a href="#fabric"><span>Fabric and nature</span></a></li>
+        <li><a href="#what-if"><span>What-if editing</span></a></li>
+        <li><a href="#open"><span>The real map</span></a></li>
+    </ol>
+</nav>
+
+<main>
+    <section class="stage stage--hero" id="overview" data-figure="Fig. 0 Blueprint" data-side="left">
+        <div class="panel">
+            <p class="eyebrow">PLAN Fall Meeting · Netherlands · EPSG:28992</p>
+            <h1 tabindex="-1">CrossTwin</h1>
+            <p class="lede">A digital twin of how a city's systems connect.</p>
+            <p>See how a change in one urban system moves through the whole city.</p>
+        </div>
+    </section>
+
+    <section class="stage" id="foundation" data-figure="Fig. 1 Foundation" data-side="right">
+        <div class="panel">
+            <p class="eyebrow">01 · Geospatial foundation</p>
+            <h2 tabindex="-1">One city, from province to neighbourhood</h2>
+            <p>Land cover, terrain, buildings and boundaries sit together in PostGIS, in EPSG:28992, nested from province down to neighbourhood. The layers import from Dutch open data such as PDOK, CBS and the Klimaateffectatlas, and from OpenStreetMap.</p>
+            <p class="datum">Province › City › District › Neighbourhood</p>
+        </div>
+    </section>
+
+    <section class="stage" id="causal-network" data-figure="Fig. 2 Causal network" data-side="left">
+        <div class="panel">
+            <p class="eyebrow">02 · Causal network</p>
+            <h2 tabindex="-1">Changes travel along a causal graph</h2>
+            <p>The graph follows DPSIR: Driver, Pressure, State, Impact, Response. Stored models recalculate from their inputs, so a change travels on wherever the edges are built; just under half of the graph's 105 edges are computed so far, and the rest are partial or documented gaps.</p>
+            <ul class="legend">
+                <li><span class="swatch swatch--wire"></span>Computed edge</li>
+                <li><span class="swatch swatch--gap"></span>Not computed yet</li>
+                <li><span class="swatch swatch--ochre"></span>Population to service time</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="stage" id="water" data-figure="Fig. 3 Water supply" data-side="right">
+        <div class="panel">
+            <p class="eyebrow">03 · Water supply</p>
+            <h2 tabindex="-1">From well to tap, and what leaks</h2>
+            <p>Extraction, treatment and pipe networks feed production, coverage and operating cost, and real losses are traced to the pipes where leakage is presumed as non-revenue water. Population drives demand on through to supply security and service time.</p>
+        </div>
+    </section>
+
+    <section class="stage" id="heat" data-figure="Fig. 4 Urban heat" data-side="left">
+        <div class="panel">
+            <p class="eyebrow">04 · Urban heat</p>
+            <h2 tabindex="-1">Where the city holds its heat</h2>
+            <p>Land surface temperature comes from Landsat thermal bands, and sky view factor from the surface model. For a chosen view and hour, SOLWEIG computes mean radiant temperature, UTCI and PET, with buildings and trees casting the shade.</p>
+            <p class="datum">LST · SVF · Tmrt · UTCI · PET</p>
+        </div>
+    </section>
+
+    <section class="stage" id="housing" data-figure="Fig. 5 Housing" data-side="right">
+        <div class="panel">
+            <p class="eyebrow">05 · Housing and population</p>
+            <h2 tabindex="-1">More people, more homes needed</h2>
+            <p>CBS forecasts give the population, and population divided by household size gives the homes needed. The dashboard sets that against supply, affordability stress and pipeline projects, and a what-if slider tests other futures without saving them.</p>
+            <div class="sim-slider" data-slider role="img" aria-label="Illustration of a population control moving from the low to the high CBS forecast variant.">
+                <div class="sim-track"><span class="sim-thumb"></span></div>
+                <div class="sim-labels"><span>low</span><span>forecast</span><span>high</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stage" id="fabric" data-figure="Fig. 6 Fabric and nature" data-side="left">
+        <div class="panel">
+            <p class="eyebrow">06 · Built-up fabric and nature</p>
+            <h2 tabindex="-1">The fabric the other systems stand on</h2>
+            <p>Building stock and type mix, street density, facilities and green space are summarised for any administrative unit. Soil maps and land cover add the infiltration of a rain event.</p>
+            <ul class="legend">
+                <li><span class="swatch swatch--residential"></span>Residential</li>
+                <li><span class="swatch swatch--commercial"></span>Commercial</li>
+                <li><span class="swatch swatch--mixed"></span>Mixed use</li>
+                <li><span class="swatch swatch--institutional"></span>Institutional</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="stage" id="what-if" data-figure="Fig. 7 What-if editing" data-side="right">
+        <div class="panel">
+            <p class="eyebrow">07 · What-if editing</p>
+            <h2 tabindex="-1">Draw a building, then undo it</h2>
+            <p>Staff can draw a building on the map: the land cover around it changes, the surface model is patched, and heat results it touches are flagged as stale until they are rerun. Restore the backup to undo it; sliders test scenarios without writing to the baseline.</p>
+            <ul class="effects">
+                <li data-effect="patch">New_Units → LandCover</li>
+                <li data-effect="dsm">Buildings → DSM</li>
+                <li data-effect="stale">SVF, Tmrt, UTCI marked stale</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="stage stage--closing" id="open" data-figure="Fig. 8 The whole city" data-side="left">
+        <div class="panel">
+            <p class="eyebrow">Next</p>
+            <h2 tabindex="-1">Follow a change on the real map</h2>
+            <p>This district is a generated illustration. The map holds the real layers: load an area, open its indicators and test a scenario.</p>
+        </div>
+    </section>
+
+    <section class="video-stage" id="demo" aria-label="Demo video">
+        <div class="video-frame" id="video-frame">
+            <video id="demo-video" controls playsinline preload="metadata" hidden></video>
+            <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0;" autoplay muted loop id="video-empty" src="https://www.youtube.com/embed/t0FGgSdDM5g?si=Dk21_mno7O1dLNvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="static/js/landing/main.js"></script>
+<script src="static/js/presentation.js"></script>
+
+</body></html>
